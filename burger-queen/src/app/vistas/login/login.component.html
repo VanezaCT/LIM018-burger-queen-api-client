@@ -1,12 +1,12 @@
 <body>
 <div class="containerLogin">
     <div class="menuLogin">
-        <img id="logoImg" class="logoImg" src="//burger-queen/src/app/vistas/login/logo.png" />
+        <img id="logoimg" class="logoimg" src="./Logo.png" />
         <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-        <p id="profile-user" class="profile-user">Perfil</p>
-        <form class="formLogin">
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <p id="profile-user" class="profile-user">Perfil :)</p>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" class="formLogin" >
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email" formControlName = "usuario">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName ="password">
             
             <button class="btnLogin" type="submit">Iniciar Sesión</button>
         </form>
