@@ -3,18 +3,21 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 100%;
+    height: 100%;
     
 }
+
 .menuLogin{
     background-image: url("./fondo.png");
     background-size: cover;
     height: 500px;
+    width: 250px;
 }
 
 #profile-img{
     width: 100px;
     height: 100px;
-    margin-top: 20px;
 }
 
 .menuLogin, form{
@@ -23,15 +26,44 @@ body{
     align-items: center;
 }
  input{
-    height: 30px;
+    height: 40px;
     width: 200px;
-    margin-top: 10px;
-    border-radius: 8px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 0;
  }
+
+.logoimg{
+    font-family: 'Tangerine', serif;
+    font-weight: bold;
+    margin: 80px 0px 20px 0px;;
+    font-size: 60px;
+    text-shadow: 4px 4px 4px rgb(255, 255, 255);
+}
+
+.btnGoogle{
+    height: 40px;
+    width: 200px;
+    margin-top: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+ }
+
+.btnGoogle svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
 
  .btnLogin{
     height: 30px;
     width: 100px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 8px;
+    background-color: #C01E1E;
+    border: 0;
  }
+

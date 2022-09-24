@@ -10,6 +10,7 @@ import { DashboardComponent } from './vistas/dashboard/dashboard.component';
 import { NuevoComponent } from './vistas/nuevo/nuevo.component';
 import { EditarComponent } from './vistas/editar/editar.component';
 import { ModelosComponent } from './modelos/modelos.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { ModelosComponent } from './modelos/modelos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
