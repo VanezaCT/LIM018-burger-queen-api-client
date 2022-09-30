@@ -11,6 +11,7 @@ import { NuevoComponent } from './vistas/nuevo/nuevo.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CocineroComponent } from './vistas/cocinero/cocinero.component';
 import { AdministradorComponent } from './vistas/administrador/administrador.component';
+import { MeseroComponent} from './vistas/mesero/mesero.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     NuevoComponent,
    // ModelosComponent,
     CocineroComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    MeseroComponent
   ],
   imports: [
     BrowserModule,
