@@ -1,5 +1,108 @@
 {
-    "titulo":"Burguer Queen",
-    "email":"mesero@gmail.com",
-    "password":"mesero"
-}
+    "dataUsers": [
+        { "id": 1,
+          "email": "mesero@gmail.com",
+          "password": "mesero1234"
+        },
+        {
+            "id": 1,
+            "email": "cocinero@gmail.com",
+            "password": "cocinero1234"
+          },
+          {
+            "id": 2,
+            "email": "admin@gmail.com",
+            "password": "admin1234"
+          }
+      ],
+      
+      "products": [
+        {
+          "_id": "1",
+          "name": "Café americano",
+          "price": "$5",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "_id": "2",
+          "name": "Café con leche",
+          "price": "$7",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "_id": "3",
+          "name": "Sandwich de jamón y queso",
+          "price": "$10",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "_id": "4",
+          "name": "Jugo de frutas natural",
+          "price": "$7",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "_id": "5",
+          "name": "Hamburguesa simple",
+          "price": "$10",
+          "image":"",
+          "type": "Almuerzo y cena"
+        },
+        {
+          "_id": "6",
+          "name": "Hamburguesa doble",
+          "price": "$15",
+          "image":"",
+          "type": "Almuerzo y cena"
+        },
+        {  
+        "_id": "7",
+          "name": "Papas fritas",
+          "price": "$5",
+          "image":"",
+          "type": "Acompañamientos"
+        },
+        {
+          "_id": "8",
+          "name": "Aros de cebolla",
+          "price": "$5",
+          "image": "",
+          "type": "Acompañamientos"
+        },
+        {
+          "_id": "9",
+          "name": "Agua 500ml",
+          "price": "$5",
+          "image":"",
+          "type": "Bebidas"
+        },
+        {
+          "_id": "10",
+          "name": "Agua 750ml",
+          "price": "$7",
+          "image": "",
+          "type": "Bebidas"
+        },
+        {
+          "_id": "11",
+          "name": "Gaseosa 500ml",
+          "price": "$7",
+          "image": "",
+          "type": "Bebidas"
+        },
+        {
+          "_id": "12",
+          "name": "Gaseosa 750ml",
+          "price": "$10",
+          "image": "",
+          "type": "Bebidas"
+        }
+    
+    
+      ]
+
+    }
