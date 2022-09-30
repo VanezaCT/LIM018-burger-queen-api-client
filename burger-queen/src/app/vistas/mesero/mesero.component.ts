@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import productsSnk from "src/assets/data/appiBurguer.json";
 
 @Component({
   selector: 'app-mesero',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeseroComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+}
+productos:any = productsSnk.products
 
   ngOnInit(): void {
   }

@@ -7,7 +7,7 @@
 </header>
 <section id="carta">
     <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente">
-    <select name="numMesa" id="numMesa" >
+    <select name="numMesa" id="numMesa">
         <option value="nummesa">Selccione # de mesa</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -16,4 +16,13 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
+    <h2>Desayuno</h2>
+    <div *ngFor="let snkChar of productos">
+        
+        <ul >
+            <li scoper="row" >{{snkChar._id}}
+            </li>
+        </ul>
+
+    </div>
 </section>
