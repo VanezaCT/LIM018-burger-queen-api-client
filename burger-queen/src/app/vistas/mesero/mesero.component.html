@@ -16,13 +16,10 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
-    <h2>Desayuno</h2>
-    <div *ngFor="let snkChar of productos">
+    <button (click) ="mostrarJson()"><h2>Desayuno</h2></button>
+    <div>
         
-        <ul >
-            <li scoper="row" >{{snkChar._id}}
-            </li>
-        </ul>
+        
 
     </div>
 </section>
