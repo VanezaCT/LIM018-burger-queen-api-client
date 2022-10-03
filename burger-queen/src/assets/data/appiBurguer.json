@@ -18,84 +18,84 @@
       
       "products": [
         {
-          "_id": "1",
+          "id": 1,
           "name": "Café americano",
           "price": "$5",
           "image":"",
           "type": "Desayuno"
         },
         {
-          "_id": "2",
+          "id": 2,
           "name": "Café con leche",
           "price": "$7",
           "image":"",
           "type": "Desayuno"
         },
         {
-          "_id": "3",
+          "id": 3,
           "name": "Sandwich de jamón y queso",
           "price": "$10",
           "image":"",
           "type": "Desayuno"
         },
         {
-          "_id": "4",
+          "id": 4,
           "name": "Jugo de frutas natural",
           "price": "$7",
           "image":"",
           "type": "Desayuno"
         },
         {
-          "_id": "5",
+          "id": 5,
           "name": "Hamburguesa simple",
           "price": "$10",
           "image":"",
           "type": "Almuerzo y cena"
         },
         {
-          "_id": "6",
+          "id": 6,
           "name": "Hamburguesa doble",
           "price": "$15",
           "image":"",
           "type": "Almuerzo y cena"
         },
         {  
-        "_id": "7",
+        "id": 7,
           "name": "Papas fritas",
           "price": "$5",
           "image":"",
           "type": "Acompañamientos"
         },
         {
-          "_id": "8",
+          "id": 8,
           "name": "Aros de cebolla",
           "price": "$5",
           "image": "",
           "type": "Acompañamientos"
         },
         {
-          "_id": "9",
+          "id": 9,
           "name": "Agua 500ml",
           "price": "$5",
           "image":"",
           "type": "Bebidas"
         },
         {
-          "_id": "10",
+          "id": 10,
           "name": "Agua 750ml",
           "price": "$7",
           "image": "",
           "type": "Bebidas"
         },
         {
-          "_id": "11",
+          "id": 11,
           "name": "Gaseosa 500ml",
           "price": "$7",
           "image": "",
           "type": "Bebidas"
         },
         {
-          "_id": "12",
+          "id": 12,
           "name": "Gaseosa 750ml",
           "price": "$10",
           "image": "",
