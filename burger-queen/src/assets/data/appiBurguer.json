@@ -15,7 +15,8 @@
           "password": "admin1234"
         }
     ],
-    
+
+    "products":{
     "desayuno": [
       {
         "_id": "1",
@@ -104,4 +105,5 @@
         "type": "Bebidas"
       }
     ]
+  }
   }

@@ -11,8 +11,8 @@ export class MeseroComponent implements OnInit {
   constructor() {
     
 }
-productos:any = productsSnk.desayuno
-productosAlmuerzo:any=productsSnk.almuerzo_cena
+productos:any = productsSnk.products.desayuno
+productosAlmuerzo:any=productsSnk.products.almuerzo_cena
 
   ngOnInit(): void {
   }
