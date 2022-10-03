@@ -1,36 +1,41 @@
 {
-  "dataUsers": [
-      { "id": 1,
-        "email": "mesero@gmail.com",
-        "password": "mesero1234"
-      },
-      {
-          "id": 1,
-          "email": "cocinero@gmail.com",
-          "password": "cocinero1234"
-        }
+    "dataUsers": [
+        { "id": 1,
+          "email": "mesero@gmail.com",
+          "password": "mesero1234"
+        },
+        {
+            "id": 1,
+            "email": "cocinero@gmail.com",
+            "password": "cocinero1234"
+          },
+          {
+            "id": 2,
+            "email": "admin@gmail.com",
+            "password": "admin1234"
+          }
       ],
       
-      "desayuno": [
+      "products": [
         {
           "_id": "1",
           "name": "Café americano",
           "price": "$5",
-          "image":"https://trigodeoro.com.pe/wp-content/uploads/2020/09/taza-de-cafe-trigo-de-oro.png",
+          "image":"",
           "type": "Desayuno"
         },
         {
           "_id": "2",
           "name": "Café con leche",
           "price": "$7",
-          "image":"https://png.pngtree.com/png-clipart/20220404/original/pngtree-a-cup-of-coffee-latte-clipart-illustration-png-image_7516717.png",
+          "image":"",
           "type": "Desayuno"
         },
         {
           "_id": "3",
           "name": "Sandwich de jamón y queso",
           "price": "$10",
-          "image":"https://i.pinimg.com/originals/a0/84/af/a084aff6e6f5b1b1acb42a108263f281.png",
+          "image":"",
           "type": "Desayuno"
         },
         {
