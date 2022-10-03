@@ -27,7 +27,7 @@ export class MeseroComponent implements OnInit {
     this.httpClient.get("assets/data/appiBurguer.json").subscribe(resp => {
       console.log(resp);
       this.datajson=resp;
-      console.log(this.dataEntrante);
+      
       
       
 
