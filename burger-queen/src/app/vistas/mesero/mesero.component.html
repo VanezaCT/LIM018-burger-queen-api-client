@@ -1,8 +1,8 @@
 <header id="nav">
     <div id="menu">
-    <button class="btnmenu">CARTA</button>
-    <button class="btnmenu">PEDIDOS</button>
-    <button class="btnmenu">CERRAR SESION</button>
+        <button class="btnmenu">CARTA</button>
+        <button class="btnmenu">PEDIDOS</button>
+        <button class="btnmenu">CERRAR SESION</button>
     </div>
 </header>
 <section id="carta">
@@ -17,12 +17,23 @@
         <option value="6">6</option>
     </select>
     <h2>Desayuno</h2>
-    <div *ngFor="let snkChar of productos">
-        
-        <ul >
-            <li scoper="row" >{{snkChar._id}}
-            </li>
-        </ul>
-
+    <div id="cards">
+        <div *ngFor="let snkChar of productos">
+            <button id="cardProducts">
+                <h4>{{snkChar.price}}</h4>
+                <img src='{{snkChar.image}}'>
+                <h5>{{snkChar.name}}</h5>
+            </button>
+        </div>
+    </div>
+    <h2>Almuerzo y Cena</h2>
+    <div id="cards">
+        <div  *ngFor="let snkChar of productosAlmuerzo">
+            <button id="cardProducts">
+                <h4>{{snkChar.price}}</h4>
+                <img src='{{snkChar.image}}'>
+                <h5>{{snkChar.name}}</h5>
+            </button>
+        </div>
     </div>
 </section>
