@@ -7,7 +7,7 @@
 </header>
 <section id="carta">
     <div id="divProductos">
-    <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente">
+    <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente" >
     <select name="numMesa" id="numMesa">
         <option value="nummesa">Selccione # de mesa</option>
         <option value="1">1</option>
@@ -18,16 +18,30 @@
         <option value="6">6</option>
     </select>
     <h2>Desayuno</h2>
-    <div *ngFor="let snkChar of productos">
-        
-        <ul >
-            <li scoper="row" >{{snkChar._id}}
-            </li>
-        </ul>
-
+    <div id="cards">
+        <div *ngFor="let snkChar of productos">
+            <div id="cardProducts" (click)="capturar()">
+                <h4>{{snkChar.price}}</h4>
+                <img src='{{snkChar.image}}'>
+                <h5>{{snkChar.name}}</h5>
+            </div>
+        </div>
+    </div>
+    <h2>Almuerzo y Cena</h2>
+    <div id="cards">
+        <div  *ngFor="let snkChar of productosAlmuerzo">
+            <div id="cardProducts" >
+                <h4>{{snkChar.price}}</h4>
+                <img src='{{snkChar.image}}'>
+                <h5>{{snkChar.name}}</h5>
+            </div>
+        </div>
     </div>
 </div>
 <div id="divTomarOrden">
-
+    <table   *ngFor="let datos of productos; let i=index; let odd=odd" [class.odd]="odd">
+        <td>({{i}}) {{datos.name}}</td>
+        <td>({{i}}) {{datos.price}}</td>
+    </table>
 </div>
 </section>

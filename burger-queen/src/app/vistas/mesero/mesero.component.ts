@@ -12,9 +12,20 @@ export class MeseroComponent implements OnInit {
     
 }
 productos:any = productsSnk.products.desayuno
+
 productosAlmuerzo:any=productsSnk.products.almuerzo_cena
 
-  ngOnInit(): void {
+orden:any[]=[productsSnk.products.desayuno]
+pedidoproducto:any={}
+
+capturar(){
+  this.orden.push(this.pedidoproducto)
+  console.log(this.orden);
+  
+}
+
+ ngOnInit(): void {
   }
 
 }
+
