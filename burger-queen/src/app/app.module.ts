@@ -13,6 +13,7 @@ import { CocineroComponent } from './vistas/cocinero/cocinero.component';
 import { AdministradorComponent } from './vistas/administrador/administrador.component';
 import { MeseroComponent} from './vistas/mesero/mesero.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuproductosComponent } from './vistas/menuproductos/menuproductos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
    // ModelosComponent,
     CocineroComponent,
     AdministradorComponent,
-    MeseroComponent
+    MeseroComponent,
+    MenuproductosComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@
     <button class="btnmenu">CERRAR SESION</button>
     </div>
 </header>
-<section id="carta" >
+<section id="carta">
     <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente">
     <select name="numMesa" id="numMesa">
         <option value="nummesa">Selccione # de mesa</option>
@@ -17,18 +17,28 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
-    <button (click) ="mostrarJson()"><h2>Desayuno</h2></button>
-    <div >
-        <div *ngFor="let products of datajson">
-            <img src="" alt="">
-            <h1> name </h1>
-            <h2> type  </h2>
-            <p> precio </p>
-
+    <h2>Desayuno</h2>
+    <!-- <div id="cards">
+        <div *ngFor="let snkChar of productos">
+            <button id="cardProducts">
+                <h4>{{snkChar.price}}</h4>
+                <img src='{{snkChar.image}}'>
+                <h5>{{snkChar.name}}</h5>
+            </button>
         </div>
-        
-        
-        
+    </div>-->
+    <h2>Almuerzo y Cena</h2>
+    <!--<div id="cards">
+        <div  *ngFor="let snkChar of productosAlmuerzo">
+            <button id="cardProducts">
+                <h4>{{snkChar.price}}</h4>
+                <img src='{{snkChar.image}}'>
+                <h5>{{snkChar.name}}</h5>
+            </button>
+        </div>
+    </div>-->
 
-    </div>
+<div id="divTomarOrden">
+
+</div>
 </section>
