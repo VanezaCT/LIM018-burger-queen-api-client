@@ -20,21 +20,21 @@
     </select>
     <h2>Desayuno</h2>
     <div id="cards">
-        <div *ngFor="let snkChar of productos">
-            <div id="cardProducts" (click)="capturar()">
-                <h4>{{snkChar.price}}</h4>
-                <img src='{{snkChar.image}}'>
-                <h5>{{snkChar.name}}</h5>
+        <div >
+            <div id="cardProducts" >
+                <h4></h4>
+                <img >
+                <h5></h5>
             </div>
         </div>
     </div>
     <h2>Almuerzo y Cena</h2>
     <div id="cards">
-        <div  *ngFor="let snkChar of productosAlmuerzo">
+        <div  >
             <div id="cardProducts" >
-                <h4>{{snkChar.price}}</h4>
-                <img src='{{snkChar.image}}'>
-                <h5>{{snkChar.name}}</h5>
+                <h4></h4>
+                <img >
+                <h5></h5>
             </div>
         </div>
         
@@ -44,9 +44,9 @@
     </div>
 </div>
 <div id="divTomarOrden">
-    <table   *ngFor="let datos of productos; let i=index; let odd=odd" [class.odd]="odd">
-        <td>({{i}}) {{datos.name}}</td>
-        <td>({{i}}) {{datos.price}}</td>
+    <table >
+        <td></td>
+        <td></td>
     </table>
 </div>
 </section>
