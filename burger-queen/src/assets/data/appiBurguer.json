@@ -5,6 +5,7 @@
           "password": "mesero1234"
         },
         {
+<<<<<<< HEAD
           "id": 2,
           "email": "admin@gmail.com",
           "password": "admin1234"
@@ -59,12 +60,71 @@
       },
       {  
         "_id": "7",
+=======
+            "id": 1,
+            "email": "cocinero@gmail.com",
+            "password": "cocinero1234"
+          },
+          {
+            "id": 2,
+            "email": "admin@gmail.com",
+            "password": "admin1234"
+          }
+      ],
+      
+      "products": [
+        {
+          "id": 1,
+          "name": "Café americano",
+          "price": "$5",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "id": 2,
+          "name": "Café con leche",
+          "price": "$7",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "id": 3,
+          "name": "Sandwich de jamón y queso",
+          "price": "$10",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "id": 4,
+          "name": "Jugo de frutas natural",
+          "price": "$7",
+          "image":"",
+          "type": "Desayuno"
+        },
+        {
+          "id": 5,
+          "name": "Hamburguesa simple",
+          "price": "$10",
+          "image":"",
+          "type": "Almuerzo y cena"
+        },
+        {
+          "id": 6,
+          "name": "Hamburguesa doble",
+          "price": "$15",
+          "image":"",
+          "type": "Almuerzo y cena"
+        },
+        {  
+        "id": 7,
+>>>>>>> e73d314a87565bf20697878e7829ff254f06871e
           "name": "Papas fritas",
           "price": "$5",
           "image":"",
           "type": "Desayuno"
         },
         {
+<<<<<<< HEAD
           "_id": "2",
           "name": "Café con leche",
           "price": "$7",
@@ -115,17 +175,26 @@
             "image": "http://bk-latam-prod.s3.amazonaws.com/sites/burgerking.latam/files/BK_Web_KING_AROS_DE_CEBOLLA_500X540px.png",
             "type": "Acompañamientos"
           },
+=======
+          "id": 8,
+          "name": "Aros de cebolla",
+          "price": "$5",
+          "image": "",
+          "type": "Acompañamientos"
+        },
+>>>>>>> e73d314a87565bf20697878e7829ff254f06871e
         {
-          "_id": "9",
+          "id": 9,
           "name": "Agua 500ml",
           "price": "$5",
           "image":"https://aguafy.com/shop/wp-content/uploads/2021/02/Nestle-Pureza-Vital-500-ml.png",
           "type": "Bebidas"
         },
         {
-          "_id": "10",
+          "id": 10,
           "name": "Agua 750ml",
           "price": "$7",
+<<<<<<< HEAD
           "image": "https://cdparque.com/img/sections/productos/nestle.png",
           "type": "Bebidas"
         },
@@ -160,3 +229,27 @@
     ]
   }
   }
+=======
+          "image": "",
+          "type": "Bebidas"
+        },
+        {
+          "id": 11,
+          "name": "Gaseosa 500ml",
+          "price": "$7",
+          "image": "",
+          "type": "Bebidas"
+        },
+        {
+          "id": 12,
+          "name": "Gaseosa 750ml",
+          "price": "$10",
+          "image": "",
+          "type": "Bebidas"
+        }
+    
+    
+      ]
+
+    }
+>>>>>>> e73d314a87565bf20697878e7829ff254f06871e
