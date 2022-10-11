@@ -18,25 +18,21 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
+    <div>
+        <app-products [product]="product" *ngFor="let product of products"
+        (addedProduct)="onAddtoShopping($event)"
+        ></app-products>
+    </div>
+    <p>
+        Pedido: {{myOrder.length}}
+    </p>
     <h2>Desayuno</h2>
     <div id="cards">
-        <div >
-            <div id="cardProducts" >
-                <h4></h4>
-                <img >
-                <h5></h5>
-            </div>
-        </div>
+        
     </div>
     <h2>Almuerzo y Cena</h2>
     <div id="cards">
-        <div  >
-            <div id="cardProducts" >
-                <h4></h4>
-                <img >
-                <h5></h5>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div id="divTomarOrden">

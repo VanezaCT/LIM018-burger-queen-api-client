@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 //import productsSnk from "src/assets/data/appiBurguer.json";
 import { HttpClient } from '@angular/common/http'; 
-import * as data from '../../../assets/data/appiBurguer.json';
-
+import { Product } from 'src/app/modelos/product.interface';
+import { ProductsService } from 'src/app/servicios/api/products.service';
+import { PedidoService } from 'src/app/servicios/api/pedido.service';
 
 @Component({
   selector: 'app-mesero',
@@ -10,14 +11,18 @@ import * as data from '../../../assets/data/appiBurguer.json';
   styleUrls: ['./mesero.component.css']
 })
 export class MeseroComponent implements OnInit {
+
+  myOrder: Product[] = [];
   
   
-  public datajson: any =[];
-  @Input() dataEntrante:any;
+  products: Product[] =[];
   
 
-  constructor(private httpClient: HttpClient) {
-    
+  constructor(
+    private productsService: ProductsService, 
+    private pedidoService: PedidoService
+    ) {
+    this.myOrder = this.productsService.getOrder();
 }
 
 /*productosAlmuerzo:any=productsSnk.products.almuerzo_cena
@@ -32,16 +37,23 @@ capturar(){
 }*/
 
  ngOnInit(): void {
+
+  this.pedidoService.getAllProducts()
+  .subscribe(data => {
+    this.products=data;
+  });
   }
-  public mostrarJson(): void{
-    this.httpClient.get("assets/data/appiBurguer.json").subscribe(resp => {
-      console.log(resp);
-      this.datajson=resp;
-      
-      
+  // public mostrarJson(): void{
+  //   this.httpClient.get("http://localhost:3000/products").subscribe(resp => {
+  //     console.log(resp);
       
 
-    })
+  //   })
+  // }
+
+  onAddtoShopping(product: Product){
+    this.productsService.addProduct(product)
+    
   }
 
 }
