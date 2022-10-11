@@ -9,10 +9,12 @@ import { LoginComponent } from './vistas/login/login.component';
 import { NuevoComponent } from './vistas/nuevo/nuevo.component';
 //import { ModelosComponent } from './modelos/modelos.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { CocineroComponent } from './vistas/cocinero/cocinero.component';
 import { AdministradorComponent } from './vistas/administrador/administrador.component';
 import { MeseroComponent} from './vistas/mesero/mesero.component';
-import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './vistas/products/products.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
    // ModelosComponent,
     CocineroComponent,
     AdministradorComponent,
-    MeseroComponent
+    MeseroComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
