@@ -1,6 +1,6 @@
 <div>
- <img [src]="product.image" alt="">
- <h2>${{product.price}} </h2>
- <p>{{product.name}}</p>
- <button (click)="onAddtoCart()">  Agregar  </button>
+ 
+ <button (click)="onAddtoCart()">  <img [src]="product.image" alt="">
+    <h2>${{product.price}} </h2>
+    <p class="product--name">{{product.name}}</p> </button>
 </div>
