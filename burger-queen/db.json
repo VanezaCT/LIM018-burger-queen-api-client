@@ -10,7 +10,7 @@
       "id": 1,
       "name": "Café americano",
       "price": 5,
-      "image": "https://o.remove.bg/downloads/45421231-6769-4e60-aaac-e850404a76fb/image-removebg-preview.png",
+      "image": "https://trigodeoro.com.pe/wp-content/uploads/2020/09/taza-de-cafe-trigo-de-oro.png",
       "type": "Desayuno",
       "dateEntry": ""
     },
@@ -18,7 +18,7 @@
       "id": 2,
       "name": "Café con leche",
       "price": 7,
-      "image": "https://o.remove.bg/downloads/28c13aea-5e83-43cd-9467-8e3cf20cf868/image-removebg-preview.png",
+      "image": "https://static.wixstatic.com/media/9ffb4a_1be51afcabf1414594091b2ce0d9f6e4~mv2.png/v1/fill/w_480,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Vector%20Smart%20Object-2.png",
       "type": "Desayuno",
       "dateEntry": ""
     },
@@ -26,7 +26,7 @@
       "id": 3,
       "name": "Sandwich de jamón y queso",
       "price": 10,
-      "image": "https://o.remove.bg/downloads/d0364a69-9a92-4729-9cd9-d7c9edb5a3f3/image-removebg-preview.png",
+      "image": "https://png.pngtree.com/png-clipart/20220823/original/pngtree-double-beef-sandwich-vector-png-png-image_8452348.png",
       "type": "Desayuno",
       "dateEntry": ""
     },
@@ -34,7 +34,7 @@
       "id": 4,
       "name": "Jugo de frutas natural",
       "price": 7,
-      "image": "https://o.remove.bg/downloads/dfd87db9-809d-49fd-874a-5576285c838a/image-removebg-preview.png",
+      "image": "https://softirun.com/images/smoothies2/berry_passion.png",
       "type": "Desayuno",
       "dateEntry": ""
     },
@@ -42,7 +42,7 @@
       "id": 5,
       "name": "Hamburguesa simple",
       "price": 10,
-      "image": "https://o.remove.bg/downloads/751a660c-5e01-4337-bfd9-ee301440f8ec/image-removebg-preview.png",
+      "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     },
@@ -50,7 +50,7 @@
       "id": 6,
       "name": "Hamburguesa doble",
       "price": 15,
-      "image": "https://o.remove.bg/downloads/38deb811-06a9-4c35-b407-8ab96299d199/image-removebg-preview.png",
+      "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     },
@@ -58,7 +58,7 @@
       "id": 7,
       "name": "Papas fritas",
       "price": 5,
-      "image": "https://o.remove.bg/downloads/c3f9e5c6-4f76-4db3-b370-a98a739e94d3/image-removebg-preview.png",
+      "image": "https://cdn.pixabay.com/photo/2013/07/13/01/24/french-fries-155679_960_720.png",
       "type": "Almuerzo",
       "dateEntry": ""
     },
@@ -66,7 +66,7 @@
       "id": 8,
       "name": "Aros de cebolla",
       "price": 5,
-      "image": "https://o.remove.bg/downloads/f7bc73b1-0428-4968-99d1-9f0c056df993/image-removebg-preview.png",
+      "image": "https://cdn.pixabay.com/photo/2021/07/11/03/47/onion-rings-6402796__340.png",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     },
@@ -74,7 +74,7 @@
       "id": 9,
       "name": "Agua 500ml",
       "price": 5,
-      "image": "https://o.remove.bg/downloads/c5e3e371-b350-48bc-9f5a-4cbf3f622342/image-removebg-preview.png",
+      "image": "https://png.pngtree.com/png-clipart/20220824/original/pngtree-mineral-water-in-bottle-png-image_8491008.png",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     },
@@ -82,7 +82,7 @@
       "id": 10,
       "name": "Agua 750ml",
       "price": 7,
-      "image": "https://o.remove.bg/downloads/74aa1ac9-7ca4-44c5-83cc-ac7ef5c5648b/image-removebg-preview.png",
+      "image": "https://cdn-icons-png.flaticon.com/512/3349/3349504.png",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     },
@@ -90,7 +90,7 @@
       "id": 11,
       "name": "Bebida/gaseosa 500ml",
       "price": 7,
-      "image": "https://o.remove.bg/downloads/fbaf228c-65c9-4ed3-9916-c419b3880119/image-removebg-preview.png",
+      "image": "https://cdn-icons-png.flaticon.com/512/1237/1237004.png?w=360",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     },
@@ -98,7 +98,7 @@
       "id": 12,
       "name": "Bebida/gaseosa 750ml",
       "price": 10,
-      "image": "https://o.remove.bg/downloads/4794d0c2-c76a-44b5-a1e4-670cd8be1c7b/image-removebg-preview.png",
+      "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
       "type": "Almuerzo y cena",
       "dateEntry": ""
     }

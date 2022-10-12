@@ -1,4 +1,28 @@
-.product--name{
-    font-family: 'Pacifico', cursive;
-    text-decoration: double;
+
+#divProducts {
+    margin-top: 30px;
+background-color:#5A5B29;
+opacity: 83%;
+text-align: center;
+height: 200px;
+border-radius: 30px;
+
 }
+#divProducts:hover{
+    background-color:#ffffff;
+    }
+
+#divProducts img{
+    width: 70px;
+    height: 70px;
+}
+
+#divProducts button{
+    background-color:transparent;
+    border: 0px;
+    font-family:  'Sriracha', cursive;
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
