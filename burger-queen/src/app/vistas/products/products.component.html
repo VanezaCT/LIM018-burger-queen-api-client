@@ -1,6 +1,11 @@
-<div>
- <img [src]="product.image" alt="">
- <h2>${{product.price}} </h2>
- <p>{{product.name}}</p>
- <button (click)="onAddtoCart()">  Agregar  </button>
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+<div id="divProducts">
+
+    <button (click)="onAddtoCart()">
+        <h2>${{product.price}} </h2>
+        <img [src]="product.image" alt="">
+        <p>{{product.name}} </p>
+    </button>
+
 </div>
