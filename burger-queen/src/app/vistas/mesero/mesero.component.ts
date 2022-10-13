@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from 'src/app/modelos/product.interface';
 import { ProductsService } from 'src/app/servicios/api/products.service';
 import { PedidoService } from 'src/app/servicios/api/pedido.service';
+import { ListaDePedidosService } from 'src/app/servicios/api/lista-de-pedidos.service';
 
 @Component({
   selector: 'app-mesero',
@@ -20,7 +21,8 @@ export class MeseroComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService, 
-    private pedidoService: PedidoService
+    private pedidoService: PedidoService,
+    private listadePedidos: ListaDePedidosService
     ) {
     this.myOrder = this.productsService.getOrder();
 }
@@ -53,7 +55,10 @@ capturar(){
 
   onAddtoShopping(product: Product){
     this.productsService.addProduct(product)
-    
+    //console.log(product)
+    this.listadePedidos.disparadorDePedidos.emit({
+      data:product
+    })
   }
 
 }

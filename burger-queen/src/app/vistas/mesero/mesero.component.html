@@ -18,6 +18,7 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
+    <h2>Desayuno</h2>
     <div class="products--grid">
         <app-products [product]="product" *ngFor="let product of products"
         (addedProduct)="onAddtoShopping($event)"
@@ -26,19 +27,13 @@
     <p>
         Pedido: {{myOrder.length}}
     </p>
-    <h2>Desayuno</h2>
-    <div id="cards">
-        
-    </div>
+    
     <h2>Almuerzo y Cena</h2>
     <div id="cards">
         
     </div>
 </div>
 <div id="divTomarOrden">
-    <table >
-        <td></td>
-        <td></td>
-    </table>
+    <app-order></app-order>
 </div>
 </section>
