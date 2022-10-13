@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/servicios/api/products.service';
+
 
 @Component({
   selector: 'app-ordmesero',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdmeseroComponent implements OnInit {
 
-  constructor() { }
+  currentorder = [];
+  constructor( private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    this.productsService.myCurrentOrder$.subscribe(products =>{
+      console.log(products)
+    })
   }
 
 }

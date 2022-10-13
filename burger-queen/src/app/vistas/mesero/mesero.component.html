@@ -1,44 +1,35 @@
-
 <header id="nav">
     <div id="menu">
-    <button class="btnmenu">CARTA</button>
-    <button class="btnmenu">PEDIDOS</button>
-    <button class="btnmenu">CERRAR SESION</button>
+        <button class="btnmenu">CARTA</button>
+        <button class="btnmenu">PEDIDOS</button>
+        <button class="btnmenu">CERRAR SESION</button>
     </div>
 </header>
 <section id="carta">
     <div id="divProductos">
-    <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente" >
-    <select name="numMesa" id="numMesa">
-        <option value="nummesa">Selccione # de mesa</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-    </select>
-    <div class="products--grid">
-        <app-products [product]="product" *ngFor="let product of products"
-        (addedProduct)="onAddtoShopping($event)"
-        ></app-products>
+        <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente">
+        <select name="numMesa" id="numMesa">
+            <option value="nummesa">Selccione # de mesa</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <div class="products--grid">
+            <app-products [product]="product" *ngFor="let product of products" (addedProduct)="onAddtoShopping($event)">
+            </app-products>
+        </div>
+        <p>
+            Pedido: {{myOrder.length}}
+        </p>
+
+
     </div>
-    <p>
-        Pedido: {{myOrder.length}}
-    </p>
-    <h2>Desayuno</h2>
-    <div id="cards">
-        
+    
+    <div id="divTomarOrden">
+        <app-ordmesero>
+        </app-ordmesero>
     </div>
-    <h2>Almuerzo y Cena</h2>
-    <div id="cards">
-        
-    </div>
-</div>
-<div id="divTomarOrden">
-    <table >
-        <td></td>
-        <td></td>
-    </table>
-</div>
 </section>
