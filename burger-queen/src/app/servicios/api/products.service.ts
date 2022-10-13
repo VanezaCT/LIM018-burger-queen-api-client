@@ -9,15 +9,15 @@ import { Product } from 'src/app/modelos/product.interface';
 export class ProductsService {
 
   private myOrder: Product[] = [];
-  private myCurrentOrder = new BehaviorSubject<Product[]>([]);
+  
 
-  myCurrentOrder$ = this.myCurrentOrder.asObservable();
+  
 
   constructor() { }
 
   addProduct(product: Product){
     this.myOrder.push(product);
-    this.myCurrentOrder.next(this.myOrder);
+   
   }
 
   getOrder(){

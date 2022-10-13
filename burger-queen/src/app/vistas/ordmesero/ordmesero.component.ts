@@ -13,9 +13,7 @@ export class OrdmeseroComponent implements OnInit {
   constructor( private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productsService.myCurrentOrder$.subscribe(products =>{
-      console.log(products)
-    })
+    
   }
 
 }
