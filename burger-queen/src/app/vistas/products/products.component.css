@@ -1,28 +1,31 @@
-
 #divProducts {
     margin-top: 30px;
-background-color:#5A5B29;
-opacity: 83%;
-text-align: center;
-height: 200px;
-border-radius: 30px;
+    background-color: #d3d69a;
+    text-align: center;
+    min-height: 15em;
+    min-width: 11em;
+
+    border-radius: 30px;
 
 }
-#divProducts:hover{
-    background-color:#ffffff;
-    }
 
-#divProducts img{
+
+#divProducts:hover {
+    background-color: #fffffffb;
+    background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffed 25%, #eff1ce 50%, #d3dbb1 75%, #bbc99a 100%);
+}
+#divProducts img {
     width: 70px;
     height: 70px;
+
 }
 
-#divProducts button{
-    background-color:transparent;
+#divProducts button {
+    background-color: transparent;
     border: 0px;
-    font-family:  'Sriracha', cursive;
-    font-weight: bold;
-    font-size: 12px;
+    font-family: 'Galindo', cursive;
+    
+    font-size: 100%;
+
 
 }
-

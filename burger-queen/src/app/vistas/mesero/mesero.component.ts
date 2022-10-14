@@ -52,6 +52,7 @@ capturar(){
     this.listadePedidos.disparadorDePedidos.emit({
       data:product
     })
+    
   }
 
 }

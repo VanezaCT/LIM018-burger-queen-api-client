@@ -1,4 +1,3 @@
-import { Product } from './../../modelos/product.interface';
 import { ListaDePedidosService } from './../../servicios/api/lista-de-pedidos.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,8 +10,8 @@ export class OrderComponent implements OnInit {
 
 
   constructor(private listadePedidos: ListaDePedidosService) { }
-  public listaPedidos:Array< any>=[];
-  public arrayPedidos: Array<any>=[]
+  public listaPedidos: Array<any> = [];
+  public subTotal:any=0;
 
   delete(): void{
     console.log("borrado");
@@ -20,6 +19,7 @@ export class OrderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.listadePedidos.disparadorDePedidos.subscribe(data =>{
 
       console.log("reciebiendo data....",data);
@@ -28,6 +28,8 @@ export class OrderComponent implements OnInit {
         this.listaPedidos=this.listaPedidos.map((item) =>{
           if(item.data.id == data.data.id){
             item.cant+=1;
+            this.subTotal=item.cant*data.data.price;
+            console.log(this.subTotal)
             return item;
           }
           return item;
@@ -35,9 +37,12 @@ export class OrderComponent implements OnInit {
         })
       }else{
         this.listaPedidos.push({...data, cant: 1})
+        this.subTotal=data.data.price;
+        console.log(this.subTotal);
 
 
       }
+      
 
 
     })

@@ -1,14 +1,18 @@
 <table>
     <tr>
-        <td>Cantidad</td>
-        <td>Producto</td>
-        <td>Precio</td>
+        <th>Cantidad</th>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Sub-Total</th>
+        <th>  </th>
     </tr>
     <tr *ngFor="let pedidos of listaPedidos">
+
 
         <td>{{pedidos.cant}} </td>
         <td>{{pedidos?.data?.name}}</td>
         <td>{{pedidos?.data?.price}}</td>
+        <td> {{pedidos.cant*pedidos?.data?.price}} </td>
         <td><button (click)="delete()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
             <g clip-path="url(#clip0_61_53)">
             <path d="M14 12H12V24H14V12Z" fill="black"/>
@@ -22,6 +26,7 @@
             </clipPath>
             </defs>
             </svg></button></td>
+
     </tr>
 
 </table>
