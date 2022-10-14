@@ -11,7 +11,8 @@ export class OrderComponent implements OnInit {
 
 
   constructor(private listadePedidos: ListaDePedidosService) { }
-  public listaPedidos:Array<any>=[]
+  public listaPedidos:Array< any>=[];
+  public arrayPedidos: Array<any>=[]
 
   delete(): void{
     console.log("borrado");
@@ -20,6 +21,7 @@ export class OrderComponent implements OnInit {
 
   ngOnInit(): void {
     this.listadePedidos.disparadorDePedidos.subscribe(data =>{
+
       console.log("reciebiendo data....",data);
      // this.listaPedidos.push(data)
       if(this.listaPedidos.some((elem) => elem.data.id == data.data.id)){
@@ -36,6 +38,7 @@ export class OrderComponent implements OnInit {
 
 
       }
+
 
     })
     

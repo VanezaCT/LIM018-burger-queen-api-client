@@ -45,17 +45,10 @@ capturar(){
     this.products=data;
   });
   }
-  // public mostrarJson(): void{
-  //   this.httpClient.get("http://localhost:3000/products").subscribe(resp => {
-  //     console.log(resp);
-      
-
-  //   })
-  // }
-
+  
   onAddtoShopping(product: Product){
     this.productsService.addProduct(product)
-    //console.log(product)
+    // console.log(product)
     this.listadePedidos.disparadorDePedidos.emit({
       data:product
     })

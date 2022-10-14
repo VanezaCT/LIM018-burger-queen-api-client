@@ -15,7 +15,10 @@ import { CocineroComponent } from './vistas/cocinero/cocinero.component';
 import { AdministradorComponent } from './vistas/administrador/administrador.component';
 import { MeseroComponent} from './vistas/mesero/mesero.component';
 import { ProductsComponent } from './vistas/products/products.component';
+
+import { OrdmeseroComponent } from './vistas/ordmesero/ordmesero.component';
 import { OrderComponent } from './vistas/order/order.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { OrderComponent } from './vistas/order/order.component';
     AdministradorComponent,
     MeseroComponent,
     ProductsComponent,
+    OrdmeseroComponent,
     OrderComponent
+
   ],
   imports: [
     BrowserModule,
