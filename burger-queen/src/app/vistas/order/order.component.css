@@ -1,4 +1,38 @@
-td button{
+td button {
     background-color: transparent;
     border: 0px;
+}
+
+table {
+    font-size: 120%;
+    margin: 45px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 130%;
+    font-weight:lighter;
+    padding: 5px;
+    background: #5c251e;
+    border-bottom: 3px solid #fff;
+    color: rgb(242, 244, 247);
+    text-align: center;
+}
+
+td {
+    padding: 8px;
+    background: beige;
+    border-bottom: 1px solid #fff;
+    color: #722620;
+    border-top: 1px solid transparent;
+    text-align: center;
+}
+
+tr:hover td {
+    background: #a78266;
+    color: #fffefe;
+    
+    
 }

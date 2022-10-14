@@ -1,7 +1,8 @@
+import { Product } from './../../modelos/product.interface';
 import { Injectable } from '@angular/core';
 
-import { BehaviorSubject } from 'rxjs';
-import { Product } from 'src/app/modelos/product.interface';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +11,8 @@ export class ProductsService {
 
   private myOrder: Product[] = [];
 
- 
-  
 
-  
+  HttpClient: any;
 
   constructor() { }
 
@@ -24,4 +23,6 @@ export class ProductsService {
   getOrder(){
     return this.myOrder
   }
+
+
 }

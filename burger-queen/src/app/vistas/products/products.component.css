@@ -1,10 +1,9 @@
 #divProducts {
     margin-top: 30px;
-    background-image: radial-gradient(circle at 50% 50%, #f8eac0 0, #d7cf9b 25%, #abad6d 50%, #7e8c42 75%, #587524 100%);
-    opacity: 83%;
+    background-color: #d3d69a;
     text-align: center;
     min-height: 15em;
-    min-width: 10em;
+    min-width: 11em;
 
     border-radius: 30px;
 
@@ -13,9 +12,8 @@
 
 #divProducts:hover {
     background-color: #fffffffb;
-    background-image: radial-gradient(circle at 49.31% 50.58%, #ffffe4 0, #ffffdb 25%, #f0f2d0 50%, #d8dcc5 75%, #c4c9bb 100%);
+    background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffed 25%, #eff1ce 50%, #d3dbb1 75%, #bbc99a 100%);
 }
-
 #divProducts img {
     width: 70px;
     height: 70px;
@@ -25,9 +23,9 @@
 #divProducts button {
     background-color: transparent;
     border: 0px;
-    font-family: 'Cherry Swash', cursive;
-    text-decoration: double;
-    font-size: 90%;
+    font-family: 'Galindo', cursive;
+    
+    font-size: 100%;
 
 
 }
