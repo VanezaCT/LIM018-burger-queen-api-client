@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 import { BehaviorSubject } from 'rxjs';
 import { Product } from 'src/app/modelos/product.interface';
 
@@ -9,6 +9,8 @@ import { Product } from 'src/app/modelos/product.interface';
 export class ProductsService {
 
   private myOrder: Product[] = [];
+
+ 
   
 
   
@@ -17,7 +19,6 @@ export class ProductsService {
 
   addProduct(product: Product){
     this.myOrder.push(product);
-   
   }
 
   getOrder(){

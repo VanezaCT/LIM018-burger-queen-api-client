@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/servicios/api/products.service';
 
 
+
 @Component({
   selector: 'app-ordmesero',
   templateUrl: './ordmesero.component.html',
@@ -9,11 +10,10 @@ import { ProductsService } from 'src/app/servicios/api/products.service';
 })
 export class OrdmeseroComponent implements OnInit {
 
-  currentorder = [];
-  constructor( private productsService: ProductsService) { }
+  constructor( ) { }
 
   ngOnInit(): void {
-    
+  
   }
 
 }

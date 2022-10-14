@@ -26,12 +26,15 @@
 
 #carta{
     display: flex;
+    flex-direction: row;
+
+    
     justify-content: space-between;
 }
 
 #divProductos {
     margin-top: 20px;
-    background-color: #D9D9D9;
+    
     width: 700px;
     height: 860px;
     padding: 5px;
@@ -93,6 +96,13 @@ width: 100%;
     display: flex;
     flex-direction: column;
 
+}
+@media screen and (max-width: 39em){
+    .products--grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9em){
