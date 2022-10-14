@@ -5,10 +5,10 @@
         <td>Precio</td>
     </tr>
     <tr *ngFor="let pedidos of listaPedidos">
-        <td> +-</td>
+        <td>{{pedidos.cant}} </td>
         <td>{{pedidos?.data?.name}}</td>
         <td>{{pedidos?.data?.price}}</td>
-        <td><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <td><button (click)="delete()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
             <g clip-path="url(#clip0_61_53)">
             <path d="M14 12H12V24H14V12Z" fill="black"/>
             <path d="M20 12H18V24H20V12Z" fill="black"/>
