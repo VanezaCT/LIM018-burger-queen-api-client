@@ -2,8 +2,8 @@
     margin-top: 30px;
     background-color: #d3d69a;
     text-align: center;
-    min-height: 15em;
-    min-width: 11em;
+    min-height: 17em;
+    min-width: 12em;
 
     border-radius: 30px;
 
@@ -12,6 +12,7 @@
 
 #divProducts:hover {
     background-color: #fffffffb;
+    color: black;
     background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffed 25%, #eff1ce 50%, #d3dbb1 75%, #bbc99a 100%);
 }
 #divProducts img {
@@ -24,8 +25,26 @@
     background-color: transparent;
     border: 0px;
     font-family: 'Galindo', cursive;
-    
     font-size: 100%;
 
 
 }
+#divProducts button div h3{
+    font-family: 'Cherry Swash', cursive;
+    font-size: 120%;
+    margin-top: 15px;
+    margin-top: 15px;
+    width: 11em;
+  
+    color: rgb(0, 0, 0);
+ 
+  
+    text-decoration-line: overline;
+
+    font-weight: 50;
+    
+
+    
+
+}
+
