@@ -14,9 +14,8 @@ export class OrderComponent implements OnInit {
 
   constructor(private listadePedidos: ListaDePedidosService) { }
   public listaPedidos: Array<any> = [];
-  public subTotal: any = 0;
-  public Asubtotal: Array<any> = []
-  public totalPedidos: any = []
+  public arrsubTotal:any=[];
+  public total: any=0;
 
 
 
@@ -39,13 +38,16 @@ export class OrderComponent implements OnInit {
           return item;
 
         })
-      } else {
-        this.listaPedidos.push({ ...data, cant: 1 })
-        // this.subTotal=data.data.price;
+      }else{
+        this.listaPedidos.push({...data, cant: 1})
+        this.subTotal=data.data.price;
+        console.log(this.subTotal);
+
 
       }
-      this.totalPedidos = this.listaPedidos
-      console.log(this.totalPedidos)
+      
+
+
     })
 
   }
