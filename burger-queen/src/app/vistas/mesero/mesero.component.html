@@ -10,7 +10,7 @@
 
     <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente" >
     <select name="numMesa" id="numMesa">
-        <option value="nummesa">Selccione # de mesa</option>
+        <option value="nummesa">Seleccione # de mesa</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -18,8 +18,9 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
-    <h2>Desayuno</h2>
+    
     <div class="products--grid">
+        
         <app-products [product]="product" *ngFor="let product of products"
         (addedProduct)="onAddtoShopping($event)"
         ></app-products>
@@ -28,10 +29,7 @@
         Pedido: {{myOrder.length}}
     </p>
     
-    <h2>Almuerzo y Cena</h2>
-    <div id="cards">
-        
-    </div>
+    
 </div>
 
     <app-order id="divTomarOrden"></app-order>
