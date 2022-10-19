@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 //import productsSnk from "src/assets/data/appiBurguer.json";
 import { HttpClient } from '@angular/common/http'; 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -31,17 +31,6 @@ export class MeseroComponent implements OnInit {
     this.myOrder = this.productsService.getOrder();
 }
 
-/*productosAlmuerzo:any=productsSnk.products.almuerzo_cena
-
-orden:any[]=[productsSnk.products.desayuno]
-pedidoproducto:any={}
-
-capturar(){
-  this.orden.push(this.pedidoproducto)
-  console.log(this.orden);
-  
-}*/
-
  ngOnInit(): void {
   
 
@@ -63,8 +52,9 @@ capturar(){
     this.listadePedidos.disparadorDePedidos.emit({
       data:product
     })
+
     
-  }
+    }
 
 }
 

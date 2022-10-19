@@ -1,6 +1,7 @@
 import { ListaDePedidosService } from './../../servicios/api/lista-de-pedidos.service';
 import { Component, OnInit, Input} from '@angular/core';
 
+
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -16,33 +17,29 @@ export class OrderComponent implements OnInit {
   public arrsubTotal:any=[];
   public total: any=0;
 
-  delete(): void{
-    console.log("borrado");
-  
-  }
+
+
 
   ngOnInit(): void {
 
-    this.listadePedidos.disparadorDePedidos.subscribe(data =>{
-
-      console.log("reciebiendo data....",data);
-     // this.listaPedidos.push(data)
-      if(this.listaPedidos.some((elem) => elem.data.id == data.data.id)){
-        this.listaPedidos=this.listaPedidos.map((item) =>{
-          if(item.data.id == data.data.id){
-            item.cant+=1;
-           
+    this.listadePedidos.disparadorDePedidos.subscribe(data => {
+      //console.log("reciebiendo data....",data);
+      // this.listaPedidos.push(data)
+      if (this.listaPedidos.some((elem) => elem.data.id == data.data.id)) {
+        this.listaPedidos = this.listaPedidos.map((item) => {
+          if (item.data.id == data.data.id) {
+            item.cant += 1;
+          
             return item;
           }
           return item;
-
         })
       }else{
         this.listaPedidos.push({...data, cant: 1})
         
 
-
       }
+
       if(this.listaPedidos.some((elem) => elem.data.id == data.data.id)){
         this.listaPedidos=this.listaPedidos.map((x) =>{
           if(x.data.id == data.data.id){
@@ -71,10 +68,11 @@ export class OrderComponent implements OnInit {
 
 
 
+
     })
-    
+
   }
-
-
   
+
 }
+
