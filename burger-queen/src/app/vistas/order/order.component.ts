@@ -1,5 +1,5 @@
 import { ListaDePedidosService } from './../../servicios/api/lista-de-pedidos.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-order',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
+
+  @Input() formCli: object={};
 
 
   constructor(private listadePedidos: ListaDePedidosService) { }
