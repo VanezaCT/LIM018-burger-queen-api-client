@@ -12,4 +12,6 @@ export class PedidoService {
     return this.http.get<Product[]>('http://localhost:3000/products')
 
   }
+
+
 }

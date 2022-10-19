@@ -51,6 +51,9 @@ export class OrderComponent implements OnInit {
     })
 
   }
+  subTotal(subTotal: any) {
+    throw new Error('Method not implemented.');
+  }
 
 delete(data:ProductsComponent){
   console.log("borrar este producto", data)
