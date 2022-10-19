@@ -15,6 +15,7 @@
     color: black;
     background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffed 25%, #eff1ce 50%, #d3dbb1 75%, #bbc99a 100%);
 }
+
 #divProducts img {
     width: 70px;
     height: 70px;
@@ -23,28 +24,35 @@
 
 #divProducts button {
     background-color: transparent;
-    border: 0px;
+    border: none;
     font-family: 'Galindo', cursive;
     font-size: 100%;
 
 
 }
-#divProducts button div h3{
+
+@media screen and (min-width: 40em) and (max-width: 63.9em) {
+    #divProducts {
+        min-height: 12em;
+        min-width: 8em;
+    }
+}
+
+#divProducts button div h3 {
     font-family: 'Cherry Swash', cursive;
     font-size: 120%;
     margin-top: 15px;
     margin-top: 15px;
     width: 11em;
-  
+
     color: rgb(0, 0, 0);
- 
-  
+
+
     text-decoration-line: overline;
 
     font-weight: 50;
-    
 
-    
+
+
 
 }
-
