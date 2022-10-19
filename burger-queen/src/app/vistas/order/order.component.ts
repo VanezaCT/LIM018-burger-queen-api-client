@@ -57,8 +57,8 @@ export class OrderComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-delete(data:ProductsComponent){
-  console.log("borrar este producto", data)
+delete(){
+  console.log("borrar este producto")
 }
 
   }
