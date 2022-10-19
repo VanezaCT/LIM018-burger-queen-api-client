@@ -66,7 +66,7 @@ export class OrderComponent implements OnInit {
        
       this.total=this.arrsubTotal.reduce((a: any,b: any) => { return a+b})
       console.log(this.total)
-      console.log(this.total)
+      
 
 
 
