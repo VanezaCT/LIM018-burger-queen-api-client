@@ -8,7 +8,7 @@ import { Component, OnInit, Input} from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
-  @Input() formCli: object={};
+  @Input() formCli: any={};
 
 
   constructor(private listadePedidos: ListaDePedidosService) { }
