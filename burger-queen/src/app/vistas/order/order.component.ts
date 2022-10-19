@@ -11,7 +11,7 @@ import { ProductsComponent } from '../products/products.component';
 export class OrderComponent implements OnInit {
   ProductsService: any;
 
-  @Input() formCli: object={};
+  @Input() formCli: any={};
 
 
   constructor(private listadePedidos: ListaDePedidosService) { }
