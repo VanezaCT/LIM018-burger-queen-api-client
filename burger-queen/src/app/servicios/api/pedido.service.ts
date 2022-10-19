@@ -9,7 +9,11 @@ export class PedidoService {
 
   constructor(private http: HttpClient) { }
   getAllProducts(){
-    return this.http.get<Product[]>('http://localhost:3000/products')
+    return this.http.get<Product[]>('http://localhost:3000/products', {
+      headers: {
+        Authorization: "Bearer EsUnSecreto"
+      }
+    })
 
   }
 

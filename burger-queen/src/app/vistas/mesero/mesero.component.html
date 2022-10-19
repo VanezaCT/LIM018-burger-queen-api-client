@@ -6,34 +6,35 @@
     </div>
 </header>
 <section id="carta">
+
+    
     <div id="divProductos">
 
-    <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente" >
-    <select name="numMesa" id="numMesa">
-        <option value="nummesa">Seleccione # de mesa</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-    </select>
-    
-    <div class="products--grid">
+        <form [formGroup]="clientForm" (keyup.enter)="onClient(clientForm.value)">
+            <input id="inputNameUsuario" type="text" placeholder="Ingresa nombre del cliente" formControlName="client" >
+            <input id="numMesa" type="number" placeholder="N° de mesa" formControlName="mesa" min="1" max="20">
+          
+        </form>
+
+        <div class="products--grid">
+
+            <app-products [product]="product" *ngFor="let product of products" (addedProduct)="onAddtoShopping($event)">
+            </app-products>
+        </div>
+
+        <p>
+            Pedido: {{myOrder.length}}
+        </p>
+
+
         
-        <app-products [product]="product" *ngFor="let product of products"
-        (addedProduct)="onAddtoShopping($event)"
-        ></app-products>
+
     </div>
-    <p>
-        Pedido: {{myOrder.length}}
-    </p>
     
     
-</div>
+
 
     <app-order id="divTomarOrden"></app-order>
-    
+
 
 </section>
-

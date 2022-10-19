@@ -1,6 +1,6 @@
 import { ProductsService } from 'src/app/servicios/api/products.service';
 import { ListaDePedidosService } from './../../servicios/api/lista-de-pedidos.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ProductsComponent } from '../products/products.component';
 
 @Component({
@@ -10,6 +10,8 @@ import { ProductsComponent } from '../products/products.component';
 })
 export class OrderComponent implements OnInit {
   ProductsService: any;
+
+  @Input() formCli: object={};
 
 
   constructor(private listadePedidos: ListaDePedidosService) { }
