@@ -68,7 +68,7 @@ export class OrderComponent implements OnInit {
       this.orderobj={
         "userId": "mesero",
         "client": this.formCli.client,
-        "products": this.listaPedidos.map((x)=>{return x.data.name}),
+        "products": this.listaPedidos.map((x)=>{return x.data.id}),
         "products[].qty": this.listaPedidos.map((x)=> {return x.cant})
 
       }

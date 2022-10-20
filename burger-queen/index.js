@@ -33,6 +33,9 @@ server.post('/auth', (req, res) => {
   } else res.status(400).send('Bad Request')
 })
 
+
+
+
 server.use(router)
 server.listen(3000, () => {
   console.log('JSON Server is running')
