@@ -16,6 +16,7 @@ export class OrderComponent implements OnInit {
   public listaPedidos: Array<any> = [];
   public arrsubTotal:any=[];
   public total: any=0;
+  public orderobj: Object={};
 
 
 
@@ -62,7 +63,16 @@ export class OrderComponent implements OnInit {
       console.log(this.arrsubTotal)
        
       this.total=this.arrsubTotal.reduce((a: any,b: any) => { return a+b})
-      console.log(this.total)
+      console.log(this.listaPedidos)
+      
+      this.orderobj={
+        "userId": "mesero",
+        "client": this.formCli.client,
+        "products": this.listaPedidos.map((x)=>{return x.data.name}),
+        "products[].qty": this.listaPedidos.map((x)=> {return x.cant})
+
+      }
+      console.log(this.orderobj);
       
 
 
