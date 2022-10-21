@@ -16,6 +16,8 @@ export class OrderComponent implements OnInit {
   public listaPedidos: Array<any> = [];
   public arrsubTotal:any=[];
   public total: any=0;
+  public orderobj: Object={};
+  
 
 
 
@@ -56,13 +58,25 @@ export class OrderComponent implements OnInit {
 
         
       }
-      console.log(this.listaPedidos)
+      
       this.arrsubTotal=this.listaPedidos.map((obj) => { return obj.subTotal})
 
       console.log(this.arrsubTotal)
        
       this.total=this.arrsubTotal.reduce((a: any,b: any) => { return a+b})
-      console.log(this.total)
+      
+      
+      this.orderobj={
+        "userId": "mesero",
+        "client": this.formCli.client,
+        "products": this.listaPedidos.map((x)=>{return x.data.id}),
+        "products[].qty": this.listaPedidos.map((x)=> {return x.cant})
+
+      }
+      console.log(this.orderobj);
+
+
+      
       
 
 
@@ -70,9 +84,27 @@ export class OrderComponent implements OnInit {
 
 
     })
+    
 
   }
-  
+  delete(id:any){
+    console.log("borrar este producto");
+    console.log(this.listaPedidos);
+    
+    // const iddelete=this.listaPedidos.findIndex((x)=>{return x.data.id==x.data.id});
+    // console.log(iddelete)
+    const eliminar = this.listaPedidos.findIndex(p => id === p.data.id); 
+    console.log(eliminar)
+    this.listaPedidos.splice(eliminar,1);
 
+    this.arrsubTotal=this.listaPedidos.map((obj) => { return obj.subTotal})
+
+      console.log(this.arrsubTotal)
+       
+      this.total=this.arrsubTotal.reduce((a: any,b: any) => { return a+b})
+
+
+  
+    }
 }
 
