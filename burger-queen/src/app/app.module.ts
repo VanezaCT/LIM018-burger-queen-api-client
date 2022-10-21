@@ -1,9 +1,9 @@
+import { HeaderComponent } from './vistas/header/header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './plantilla/header/header.component';
 import { FooterComponent } from './plantilla/footer/footer.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { NuevoComponent } from './vistas/nuevo/nuevo.component';
@@ -18,12 +18,13 @@ import { ProductsComponent } from './vistas/products/products.component';
 
 import { OrdmeseroComponent } from './vistas/ordmesero/ordmesero.component';
 import { OrderComponent } from './vistas/order/order.component';
+import { PedidosComponent } from './vistas/pedidos/pedidos.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     routingComponents,
     LoginComponent,
@@ -34,7 +35,10 @@ import { OrderComponent } from './vistas/order/order.component';
     MeseroComponent,
     ProductsComponent,
     OrdmeseroComponent,
-    OrderComponent
+    OrderComponent,
+    PedidosComponent,
+    HeaderComponent
+
 
   ],
   imports: [
