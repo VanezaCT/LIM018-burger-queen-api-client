@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+     background-image: url(../../../assets/images/burger01.jpg);
+    background-size:cover;
 }
 
 #divProductos {
@@ -12,26 +14,37 @@
     height: 860px;
     padding: 5px;
 }
-
-#inputNameUsuario {
-    border: 2px solid #C01E1E;
+.bttn-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5.5%;
+}
+.bttn-type button{
+    font-size: 120%;
+    border-radius:10px;
+    padding: 3%;
+    font-family: 'Galindo', cursive;
+    font-weight: lighter;
+    background-color: #5A5B29;
+    color: white;
+    border: 3px #191a0c outset;
+}
+#divProductos form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#inputNameUsuario,
+#numMesa {
+    border: 4px solid #2c0d09;
     width: 400px;
     height: 40px;
-    margin-left: 30px;
+    margin-left: 8%;
+    border-radius: 8px;
+    font-size: 120%;
+    padding: 1%;
 }
-
-#numMesa {
-    border: 2px solid #C01E1E;
-    opacity: 70%;
-    width: 200px;
-    height: 45px;
-    margin-left: 20px;
-    
-    
-
-}
-
-
 #contProducts {
     box-sizing: content-box;
     width: 100%;
