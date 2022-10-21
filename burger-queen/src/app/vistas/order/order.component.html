@@ -1,5 +1,16 @@
+<div>
 <table>
-    
+    <tr>
+        <th>
+            Cliente
+        </th>
+        <td>{{ formCli.client}}</td>
+        
+        <th>
+            N° Mesa
+        </th>
+        <td> {{ formCli.mesa }} </td>
+    </tr><br><br>
     
     <tr>
         <th>Cantidad</th>
@@ -8,7 +19,7 @@
         <th>Sub-Total</th>
         <th> </th>
     </tr>
-    <tr *ngFor="let pedidos of listaPedidos">
+    <tr  *ngFor="let pedidos of listaPedidos">
         <td>{{pedidos.cant}} </td>
         <td>{{pedidos?.data?.name}}</td>
         <td>{{pedidos?.data?.price}}</td>
@@ -38,21 +49,12 @@
     <th>
         Total
     </th>
+    <td></td>
+    <td></td>
     <td> $ {{total}} </td>
-    <tr>
-        <th>
-            Cliente
-        </th>
-        <td>{{ formCli.client}}</td>
-        
-    </tr>
-    <tr>
-        <th>
-            N° Mesa
-        </th>
-        <td> {{ formCli.mesa }} </td>
-    </tr>
+    <td></td>
 
 </table>
 
-<button>Enviar Orden</button>
+<button id="btnOrder"  (click)="enviarOrden($event)">Enviar Orden</button>
+</div>

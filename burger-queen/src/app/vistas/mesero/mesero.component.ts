@@ -40,9 +40,9 @@ export class MeseroComponent implements OnInit {
   });
   }
   onClient(form: any): any{
-    console.log(form)
+   // console.log(form)
     this.clientFormValues=form;
-    console.log(this.clientFormValues.client)
+   // console.log(this.clientFormValues.client)
 
   }
   

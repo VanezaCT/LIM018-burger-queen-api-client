@@ -35,3 +35,19 @@ tr:hover td {
     
     
 }
+
+#btnOrder{
+    background: #5c251e;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 130%;
+    font-weight:lighter;
+margin-left: 50%;
+border-radius: 20px;
+border: 0;
+}
+
+#btnOrder:hover{
+    background: #a3635b;
+}
