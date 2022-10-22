@@ -12,7 +12,11 @@
 #divProducts:hover {
     background-color: #fffffffb;
     color: black;
-    background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffed 25%, #eff1ce 50%, #d3dbb1 75%, #bbc99a 100%);
+    
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+
 }
 
 #divProducts img {
