@@ -31,6 +31,8 @@ server.post('/auth', (req, res) => {
       token: secret
     })
   } else res.status(400).send('Bad Request')
+  
+  
 })
 
 

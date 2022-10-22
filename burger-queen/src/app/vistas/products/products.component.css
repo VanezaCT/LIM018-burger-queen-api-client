@@ -1,10 +1,9 @@
 #divProducts {
-    margin-top: 30px;
-    background-color: #d3d69a;
-    text-align: center;
-    min-height: 17em;
-    min-width: 12em;
 
+    background-color: rgba(255, 255, 255, 0.808);
+    text-align: center;
+    min-height: 14em;
+    min-width: 12em;
     border-radius: 30px;
 
 }
@@ -13,7 +12,11 @@
 #divProducts:hover {
     background-color: #fffffffb;
     color: black;
-    background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffed 25%, #eff1ce 50%, #d3dbb1 75%, #bbc99a 100%);
+    
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+
 }
 
 #divProducts img {

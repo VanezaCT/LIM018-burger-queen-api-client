@@ -102,14 +102,22 @@ export class OrderComponent implements OnInit {
     // const iddelete=this.listaPedidos.findIndex((x)=>{return x.data.id==x.data.id});
     // console.log(iddelete)
     const eliminar = this.listaPedidos.findIndex(p => id === p.data.id); 
+
+    
     //console.log(eliminar)
     this.listaPedidos.splice(eliminar,1);
 
     this.arrsubTotal=this.listaPedidos.map((obj) => { return obj.subTotal})
 
      // console.log(this.arrsubTotal)
-       
+    if(this.arrsubTotal.length >0){
       this.total=this.arrsubTotal.reduce((a: any,b: any) => { return a+b})
+    }
+     else{
+      this.total=0;
+     }
+
+      
 
 
   
