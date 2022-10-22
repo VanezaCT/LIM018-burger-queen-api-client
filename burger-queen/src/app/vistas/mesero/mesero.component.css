@@ -3,8 +3,28 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-     background-image: url(../../../assets/images/burger01.jpg);
+    position: relative;
+  
+    
+    
+    
+   
+     
+}
+#carta::after{
+    content: "";
+    background-image: url(https://img.freepik.com/foto-gratis/concepto-comida-rapida-restaurante-frito-grasiento-sacado-como-aros-cebolla-hamburguesas-pollo-frito-papas-fritas-como-simbolo-tentacion-dietetica-que-resulta-nutricion-poco-saludable_639032-2410.jpg?w=2000);
     background-size:cover;
+    filter: blur(8px)  contrast(70%)     ;
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+   
 }
 
 #divProductos {
@@ -26,9 +46,9 @@
     padding: 3%;
     font-family: 'Galindo', cursive;
     font-weight: lighter;
-    background-color: #5A5B29;
+    background-color: #d43316;
     color: white;
-    border: 3px #191a0c outset;
+    border: 3px #1a100c outset;
 }
 #divProductos form{
     display: flex;
