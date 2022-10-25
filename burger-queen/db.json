@@ -102,11 +102,58 @@
       "type": "Almuerzo y cena",
       "dateEntry": ""
     }
-    
   ],
-  "orders":[
+  "orders": [
     {
-
+      "userId": "123",
+      "client": "Deysi",
+      "products": [
+        {
+          "productId": 7,
+          "qty": 4
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "25/10/2022 02:50:00"
+    },
+    {
+      "userId": "123",
+      "products": [
+        {
+          "productId": 7,
+          "qty": 1
+        },
+        {
+          "productId": 8,
+          "qty": 1
+        },
+        {
+          "productId": 12,
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "25/10/2022 02:56:05"
+    },
+    {
+      "userId": "123",
+      "client": "Maria",
+      "products": [
+        {
+          "productId": 7,
+          "qty": 1
+        },
+        {
+          "productId": 8,
+          "qty": 1
+        },
+        {
+          "productId": 12,
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "25/10/2022 02:56:15"
     }
   ]
 }
