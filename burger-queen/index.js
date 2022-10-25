@@ -34,7 +34,35 @@ server.post('/auth', (req, res) => {
   
   
 })
+server.post('/orders', async (req, res) => {
+  try {
+    const today = new Date();
+    const now = today.toLocaleString();
+    const order = {
+      
+      userId: req.body.userId,
+      client: req.body.client,
+      products: req.body.products,
+      status: 'pending',
+      dateEntry: now,
+    };
 
+    const orders = router.db.get('orders');
+    console.log(orders)
+    
+
+   
+    
+    const result = await orders.push(order).write();
+    
+    console.log("result", result);
+    res.status(200).jsonp(order);
+
+  } catch(err){
+    res.status(400).send("No se indica Id, o se intenta crear una orden sin productos");
+    res.status(401).send("No hay cabecera de autenticación");
+  }
+});
 
 
 

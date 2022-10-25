@@ -17,5 +17,12 @@ export class PedidoService {
 
   }
 
+  createOrder(data:any){
+    return this.http.post<any>('http://localhost:3000/orders', data, {
+      headers: {
+        Authorization: "Bearer EsUnSecreto"
+      }
+    })
+  }
 
 }

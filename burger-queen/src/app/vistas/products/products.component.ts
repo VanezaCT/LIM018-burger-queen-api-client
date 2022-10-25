@@ -9,7 +9,7 @@ import { Product } from 'src/app/modelos/product.interface';
 export class ProductsComponent implements OnInit {
 
   @Input() product: Product={
-    id: 0,
+    id: "",
     name: "",
     image: "",
     price: 0,

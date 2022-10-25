@@ -1,6 +1,10 @@
+import { Component, OnInit, Input} from '@angular/core';
 import { PedidosEnviadosService } from './../../servicios/api/pedidos-enviados.service';
 import { ListaDePedidosService } from './../../servicios/api/lista-de-pedidos.service';
-import { Component, OnInit, Input} from '@angular/core';
+import { PedidoService } from 'src/app/servicios/api/pedido.service';
+// import { Order } from 'src/app/modelos/order.interface';
+
+
 
 
 @Component({
@@ -16,12 +20,22 @@ export class OrderComponent implements OnInit {
 
   constructor(
     private listadePedidos: ListaDePedidosService,
-    private enviarorden: PedidosEnviadosService
+    private enviarorden: PedidosEnviadosService,
+    private pedidoService: PedidoService,
+
     ) { }
   public listaPedidos: Array<any> = [];
   public arrsubTotal:any=[];
   public total: any=0;
-  public orderobj: Object={};
+  public orderobj: any={
+    userId:"",
+    client:"",
+    products:[
+     
+    ]
+
+
+  };
   
 
 
@@ -70,30 +84,24 @@ export class OrderComponent implements OnInit {
        
       this.total=this.arrsubTotal.reduce((a: any,b: any) => { return a+b})
       
+
+     
       
-      this.orderobj={
-        "userId": "mesero",
-        "client": this.formCli.client,
-        "products": this.listaPedidos.map((x)=>{return x.data.id}),
-        "products[].qty": this.listaPedidos.map((x)=> {return x.cant}),
-        "products[].product":this.listaPedidos.map((x)=>{return x.data})
-      }
-     // console.log(this.orderobj);
-
-
-
+        
+  
       
+    
     })
+
+    
+   
+   
     
 
   }
-  enviarOrden(orderobj:any){
-    this.enviarorden.tomarOrden.emit({
-      data:this.orderobj
-    })
+  
+  
 
-    console.log(this.orderobj);
-  }
 
   delete(id:any){
     //console.log("borrar este producto");
@@ -117,10 +125,29 @@ export class OrderComponent implements OnInit {
       this.total=0;
      }
 
+     
       
-
-
-  
+    
     }
+   
+
+    createNewOrder(){
+      this.orderobj.userId="123"
+     this.orderobj.client=this.formCli.client
+     
+ 
+     this.orderobj.products=this.listaPedidos.map((x:any)=> {
+      const ob:any={};
+      ob.productId=x.data.id;
+      ob.qty=x.cant
+
+      return ob;
+     })
+     
+    
+      this.pedidoService.createOrder(this.orderobj).subscribe(data => console.log(data))
+    }
+
+    
 }
 
