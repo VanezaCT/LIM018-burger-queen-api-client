@@ -48,7 +48,7 @@ server.post('/orders', async (req, res) => {
     };
 
     const orders = router.db.get('orders');
-    console.log(orders)
+    
     
 
    

@@ -1,1 +1,7 @@
-<p>cocinero works!</p>
+<app-header></app-header>
+
+<div class="orders-grid">
+
+    <app-pedidos [order]="order" *ngFor="let order of orders"></app-pedidos>
+</div>
+

@@ -5,7 +5,7 @@ export interface Products{
 export interface Order {
     userId: string,
     client: string, 
-    products: Products
+    products: object
 }
 export interface OrderRpta{
     id: string, 
