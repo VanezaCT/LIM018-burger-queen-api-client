@@ -1,1 +1,28 @@
-<app-header></app-header>
+<div>
+    <h1> {{order.client}} </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pedido</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let suborder of order.products" >
+                <ng-container>
+                    <td>{{suborder.productId}}</td>
+                <td>{{suborder.qty}} </td>
+                </ng-container>
+                
+                
+               
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <h3> {{order.status}} </h3>
+    <h3> {{order.dateEntry}}</h3>
+
+</div>

@@ -25,4 +25,12 @@ export class PedidoService {
     })
   }
 
+  getallOrder(){
+    return this.http.get<any>('http://localhost:3000/orders',{
+      headers: {
+        Authorization: "Bearer EsUnSecreto"
+      }
+    })
+  }
+
 }
