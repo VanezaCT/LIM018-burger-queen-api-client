@@ -9,7 +9,7 @@ import { Product } from 'src/app/modelos/product.interface';
 })
 export class CocineroComponent implements OnInit {
 
-  product: any={
+  product: any = {
     id: "",
     name: "",
     image: "",
@@ -20,39 +20,40 @@ export class CocineroComponent implements OnInit {
   products: any = [{}]
 
 
-  
-   order: any={
+
+  order: any = {
+    "_id": "",
     "userId": "",
-    "client":"" ,
+    "client": "",
     "products": [],
     "status": "",
     "dateEntry": ""
   }
-   orders: any=[{}];
-   listaproductos: any=[];
-   ind: any;
-   iind:any;
-   
+  orders: any = [{}];
+  listaproductos: any = [];
+  ind: any;
+  iind: any;
 
-  
 
-  constructor(private pedidoService:PedidoService ) { }
+
+
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit(): void {
-    this.pedidoService.getallOrder().subscribe((data) =>{ 
-      this.orders=data;
+    this.pedidoService.getallOrder().subscribe((data) => {
+      this.orders = data;
       //console.log(this.orders)
       // this.ind=this.orders.map((x:any)=>{return x.products})
       //console.log(this.ind)
-     // console.log(this.products)
-       })
-   
-    this.pedidoService.getAllProducts().subscribe((dta) =>{
-      this.products=dta;
-      this.iind=this.products.map((y:any)=>{return y.name})
+      // console.log(this.products)
+    })
+
+    this.pedidoService.getAllProducts().subscribe((dta) => {
+      this.products = dta;
+      this.iind = this.products.map((y: any) => { return y.name })
       //console.log(this.iind,this.ind)
-      
-    
+
+
       // this.newp=this.ind.map(function(subobj:any) {
       //   return subobj.map(function(d:any) {
       //     return d.productId
@@ -64,31 +65,31 @@ export class CocineroComponent implements OnInit {
       //   this.orders.products.map((m:any) =>{
       //     return m.products.map((x:any)=>{
       //       x.detalle=this.products[(x.productId-1)];
-  
+
       //       return x;
       //     })
       //   })
       // }
 
       for (let i = 0; i < this.orders.length; i++) {
-         if(this.orders[i].products){
-          this.orders[i].products.map((x:any)=>{
-            x.detalle=this.iind[(x.productId-1)];
+        if (this.orders[i].products) {
+          this.orders[i].products.map((x: any) => {
+            x.detalle = this.iind[(x.productId - 1)];
             return x
-  
+
           })
-         }
-       
-        
+        }
+
+
       }
-      
+
       //console.log(this.newp)
       // for (let i = 0; i < this.newp.length; i++) {
       //   for (let j = 0; j < this.newp[i].length; j++) {
       //    const a =this.newp[i][j];
       //     this.newp2.push(a)
       //   }
-        
+
       // }
       //console.log(this.newp2);
       // this.papu=this.newp2.map((s:any)=>{
@@ -96,7 +97,7 @@ export class CocineroComponent implements OnInit {
       //   obj.detalle=this.iind[parseInt(s)-1];
       //   return obj;
       // })
-      
+
       //this.nwpapu=this.papu.map((o:any)=>{return o.detalle});
 
       // this.orders.map((s:any)=>{
@@ -105,26 +106,26 @@ export class CocineroComponent implements OnInit {
       //   return this.orders[obj];
       // })
       console.log(this.orders)
-      
-      
-      
-  
 
-      
-      
+
+
+
+
+
+
     })
-    
 
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
+
 
   }
- 
+
 }

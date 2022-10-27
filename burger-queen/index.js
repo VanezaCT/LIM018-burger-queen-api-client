@@ -38,8 +38,9 @@ server.post('/orders', async (req, res) => {
   try {
     const today = new Date();
     const now = today.toLocaleString();
+    const generateId =Math.random().toString(36).substring(2, 18);
     const order = {
-      
+      _id:generateId,
       userId: req.body.userId,
       client: req.body.client,
       products: req.body.products,
