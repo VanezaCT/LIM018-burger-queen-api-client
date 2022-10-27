@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { PedidosEnviadosService } from 'src/app/servicios/api/pedidos-enviados.service';
 import { Product } from 'src/app/modelos/product.interface';
+import { PedidoService } from 'src/app/servicios/api/pedido.service';
+
 
 @Component({
   selector: 'app-pedidos',
@@ -10,14 +10,7 @@ import { Product } from 'src/app/modelos/product.interface';
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent implements OnInit {
-  @Input() order: any={
-    "userId": "",
-    "client":"" ,
-    "products": [],
-    "status": "",
-    "dateEntry": ""
-  }
-  @Input() product: any={
+  product: any={
     id: "",
     name: "",
     image: "",
@@ -25,15 +18,54 @@ export class PedidosComponent implements OnInit {
     type: "",
     dateEntry: ""
   }
+  products: any = [{}]
 
-  constructor(
-    
+
+  
+   order: any={
+    "userId": "",
+    "client":"" ,
+    "products": [],
+    "status": "",
+    "dateEntry": ""
+  }
+   orders: any=[{}];
+   listaproductos: any=[];
+   ind: any;
+   iind:any;
+   
+  constructor(private pedidoService:PedidoService
+
   ) { }
 
   ngOnInit(): void {
+    this.pedidoService.getallOrder().subscribe((data) =>{ 
+      this.orders=data;
+      })
+   
+      this.pedidoService.getAllProducts().subscribe((dta) =>{
+        this.products=dta;
+        this.iind=this.products.map((y:any)=>{return y.name})
+        
+        for (let i = 0; i < this.orders.length; i++) {
+           if(this.orders[i].products){
+            this.orders[i].products.map((x:any)=>{
+              x.detalle=this.iind[(x.productId-1)];
+              return x
     
+            })
+           }
+         
+          
+        }
+       
+        console.log(this.orders)
+
+        
+      })
 
 
-}
+
+  }
 
 }
