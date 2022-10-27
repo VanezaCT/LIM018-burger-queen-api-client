@@ -1,14 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
 
-.container{
+.container {
     position: relative;
     min-height: 52em;
 }
-.container::after{
+
+.container::after {
     content: "";
     background-image: url(https://img.freepik.com/foto-gratis/concepto-comida-rapida-restaurante-frito-grasiento-sacado-como-aros-cebolla-hamburguesas-pollo-frito-papas-fritas-como-simbolo-tentacion-dietetica-que-resulta-nutricion-poco-saludable_639032-2410.jpg?w=2000);
-    background-size:cover;
-    filter: blur(8px)  contrast(70%)     ;
+    background-size: cover;
+    filter: blur(8px) contrast(70%);
     background-attachment: fixed;
     width: 100%;
     height: 100%;
@@ -16,38 +17,48 @@
     top: 0;
     left: 0;
     z-index: -1;
-    
+
 
 }
-.orders-grid{
+
+.orders-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:10%
-    
+    grid-gap: 10%
 }
-.orders{
-    background-color: rgba(255, 255, 255, 0.5);
+
+.orders {
+    background-color: rgba(255, 255, 255, 0.589);
     border-radius: 10px;
-    margin: 20px;
-   
-    padding: 1%;
+    margin: 16px;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-size: 100%;
-	font-family: 'Galindo', cursive;
+    font-family: 'Galindo', cursive;
 
 }
-.orders table{
+
+h1 {
+
+    margin: -5px;
+    text-align: center;
+    margin-top: 12px;
+
+}
+
+.orders table {
     font-family: 'Raleway', sans-serif;
     background-color: white;
     border-radius: 8px;
     align-items: center;
     text-align: center;
-    margin: 4px;
+    margin: 10px;
     font-weight: bold;
 }
-.orders table th{
+
+.orders table th {
     background-color: rgb(255, 60, 0);
     color: white;
     margin: 1px;

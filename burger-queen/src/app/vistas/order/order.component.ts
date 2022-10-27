@@ -2,6 +2,7 @@ import { Component, OnInit, Input} from '@angular/core';
 import { PedidosEnviadosService } from './../../servicios/api/pedidos-enviados.service';
 import { ListaDePedidosService } from './../../servicios/api/lista-de-pedidos.service';
 import { PedidoService } from 'src/app/servicios/api/pedido.service';
+import { Router } from '@angular/router';
 // import { Order } from 'src/app/modelos/order.interface';
 
 
@@ -22,6 +23,7 @@ export class OrderComponent implements OnInit {
     private listadePedidos: ListaDePedidosService,
     private enviarorden: PedidosEnviadosService,
     private pedidoService: PedidoService,
+    private router: Router
 
     ) { }
   public listaPedidos: Array<any> = [];
@@ -135,6 +137,9 @@ export class OrderComponent implements OnInit {
       this.orderobj.userId="123"
      this.orderobj.client=this.formCli.client
      
+     
+
+     
  
      this.orderobj.products=this.listaPedidos.map((x:any)=> {
       const ob:any={};
@@ -145,7 +150,8 @@ export class OrderComponent implements OnInit {
      })
      
     
-      this.pedidoService.createOrder(this.orderobj).subscribe(data => console.log(data))
+      this.pedidoService.createOrder(this.orderobj).subscribe(data => console.log(data)),
+      this.router.navigate(['pedidos'])
     }
 
     

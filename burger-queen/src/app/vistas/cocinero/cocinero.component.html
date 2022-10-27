@@ -28,7 +28,14 @@
                 </tbody>
             </table>
         
-            <h3> {{order.status}} </h3>
+           
+            <label class="toggler-wrapper">
+                <input type="radio" name="status{{order._id}}" checked>{{order.status}}
+                <input type="radio" name="status{{order._id}}"> En proceso
+                <div class="toggler-slider">
+                  <div class="toggler-knob"></div>
+                </div>
+              </label>
             <h3> {{order.dateEntry}}</h3>
         
         </div>
