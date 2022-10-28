@@ -3,7 +3,7 @@
 
     <div class="orders-grid">
 
-    
+
         <div *ngFor="let order of orders" class="orders">
             <h1> {{order.client}} </h1>
             <table>
@@ -14,33 +14,54 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
-                    <tr *ngFor="let suborder of order.products" >
+
+                    <tr *ngFor="let suborder of order.products">
                         <ng-container>
-                         <td>{{suborder.detalle}}</td>
-                        <td>{{suborder.qty}} </td>
+                            <td>{{suborder.detalle}}</td>
+                            <td>{{suborder.qty}} </td>
                         </ng-container>
-                        
-                        
-                       
-                        
+
+
+
+
                     </tr>
                 </tbody>
             </table>
-        
-           
-            <label class="toggler-wrapper">
-                <input type="radio" name="status{{order._id}}" checked>{{order.status}}
-                <input type="radio" name="status{{order._id}}"> En proceso
-                <div class="toggler-slider">
-                  <div class="toggler-knob"></div>
-                </div>
-              </label>
+
+            <div class="status-div">
+                <ul id="filter1" class="status-ul">
+                    <li class="radio-item">
+                        <input type="radio" name="status{{order._id}}" id="{{order._id}}1" checked>
+                        <label for="{{order._id}}1">
+                            {{order.status}}
+                        </label>
+                    </li>
+                    <li class="radio-item">
+                        <input type="radio" name="status{{order._id}}" id="{{order._id}}2">
+                        <label for="{{order._id}}2">
+                            canceled
+                        </label>
+                    </li>
+                    <li class="radio-item">
+                        <input type="radio" name="status{{order._id}}" id="{{order._id}}3">
+                        <label for="{{order._id}}3">
+                            delivering
+                        </label>
+                    </li>
+                    <li class="radio-item">
+                        <input type="radio" name="status{{order._id}}" id="{{order._id}}4">
+                        <label for="{{order._id}}4">
+                            delivered
+                        </label>
+                    </li>
+                </ul>
+
+
+            </div>
+
             <h3> {{order.dateEntry}}</h3>
-        
+
         </div>
     </div>
 
 </div>
-
-
