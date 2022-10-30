@@ -16,10 +16,11 @@
                 <tbody>
 
                     <tr *ngFor="let suborder of order.products">
-                        <ng-container>
-                            <td>{{suborder.detalle}}</td>
-                            <td>{{suborder.qty}} </td>
+                        <ng-container *ngFor="let item of suborder.product">
+                            <td>{{item.name}}</td>
+                           
                         </ng-container>
+                         <td>{{suborder.qty}} </td>
 
 
 

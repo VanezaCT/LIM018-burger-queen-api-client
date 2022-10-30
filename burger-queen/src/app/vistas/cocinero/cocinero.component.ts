@@ -42,16 +42,16 @@ export class CocineroComponent implements OnInit {
   ngOnInit(): void {
     this.pedidoService.getallOrder().subscribe((data) => {
       this.orders = data;
-      //console.log(this.orders)
+      console.log(this.orders)
       // this.ind=this.orders.map((x:any)=>{return x.products})
       //console.log(this.ind)
       // console.log(this.products)
     })
 
-    this.pedidoService.getAllProducts().subscribe((dta) => {
-      this.products = dta;
-      this.iind = this.products.map((y: any) => { return y.name })
-      //console.log(this.iind,this.ind)
+    // this.pedidoService.getAllProducts().subscribe((dta) => {
+    //   this.products = dta;
+    //   this.iind = this.products.map((y: any) => { return y.name })
+    //   //console.log(this.iind,this.ind)
 
 
       // this.newp=this.ind.map(function(subobj:any) {
@@ -71,17 +71,17 @@ export class CocineroComponent implements OnInit {
       //   })
       // }
 
-      for (let i = 0; i < this.orders.length; i++) {
-        if (this.orders[i].products) {
-          this.orders[i].products.map((x: any) => {
-            x.detalle = this.iind[(x.productId - 1)];
-            return x
+      // for (let i = 0; i < this.orders.length; i++) {
+      //   if (this.orders[i].products) {
+      //     this.orders[i].products.map((x: any) => {
+      //       x.detalle = this.iind[(x.productId - 1)];
+      //       return x
 
-          })
-        }
+      //     })
+      //   }
 
 
-      }
+      // }
 
       //console.log(this.newp)
       // for (let i = 0; i < this.newp.length; i++) {
@@ -113,7 +113,7 @@ export class CocineroComponent implements OnInit {
 
 
 
-    })
+    //})
 
 
 
