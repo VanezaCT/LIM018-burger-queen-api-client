@@ -136,6 +136,15 @@ export class OrderComponent implements OnInit {
     createNewOrder(){
       this.orderobj.userId="123"
      this.orderobj.client=this.formCli.client
+
+     if(this.listaPedidos.length == 0){
+      alert("No tienes ningún pedido");
+      return
+     }
+     if(this.formCli.client==undefined || this.formCli.mesa==undefined){
+      alert("Faltan datos del cliente");
+      return
+     }
      
      
 
