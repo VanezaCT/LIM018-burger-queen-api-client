@@ -1,4 +1,5 @@
 const jsonServer = require('json-server')
+const { constants } = require('karma')
 const server = jsonServer.create()
 const router = jsonServer.router('./db.json')
 const middlewares = jsonServer.defaults()
@@ -104,6 +105,27 @@ server.post('/orders', async (req, res) => {
     res.status(401).send("No hay cabecera de autenticación");
   }
 });
+server.delete('/orders/:id', async (req, res)=>{
+  try {
+    const orders = router.db.get('orders');
+    const ord=orders.__wrapped__.orders
+    const id=req.params.id;
+    
+    
+
+    const orderbyId=ord.filter((p)=>{return p._id == id})
+    const indexbyId=ord.findIndex(x => id === x._id)
+    console.log(indexbyId, "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
+    orders.__wrapped__.orders.splice(indexbyId, 1);
+    await orders.write();
+    res.status(200).jsonp(orderbyId)
+
+    
+  } catch (error) {
+    
+  }
+})
 
 
 

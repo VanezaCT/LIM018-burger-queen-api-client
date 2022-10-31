@@ -33,4 +33,13 @@ export class PedidoService {
     })
   }
 
+  deleteOrder(id: any){
+    return this.http.delete<boolean>('http://localhost:3000/orders/'+id,  {
+      headers: {
+        Authorization: "Bearer EsUnSecreto"
+      }
+    })
+
+  }
+
 }
