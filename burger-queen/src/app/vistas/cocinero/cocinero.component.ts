@@ -128,4 +128,9 @@ export class CocineroComponent implements OnInit {
 
   }
 
+  deleteOrd(id:any){
+    console.log(id)
+    this.pedidoService.deleteOrder(id).subscribe((data)=> console.log("borrado") )
+  }
+
 }
