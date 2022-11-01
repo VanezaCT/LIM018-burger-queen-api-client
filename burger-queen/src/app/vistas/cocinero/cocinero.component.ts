@@ -105,7 +105,7 @@ export class CocineroComponent implements OnInit {
       //   obj.detalle=this.iind[parseInt(s)-1];
       //   return this.orders[obj];
       // })
-      console.log(this.orders)
+      
 
 
 
@@ -131,6 +131,11 @@ export class CocineroComponent implements OnInit {
   deleteOrd(id:any){
     console.log(id)
     this.pedidoService.deleteOrder(id).subscribe((data)=> console.log("borrado") )
+
+    const indexbyId=this.orders.findIndex((x:any) => id === x._id);
+    this.orders.splice(indexbyId,1);
+    console.log(this.orders)
+
   }
 
 }
