@@ -53,21 +53,21 @@ export class PedidosComponent implements OnInit {
     //       this.orders[i].products.map((x: any) => {
     //         x.detalle = this.iind[(x.productId - 1)];
     //         return x
-
     //       })
     //     }
-
-
     //   }
     //   console.log(this.orders);
-      
-
-      
-
 
     // })
 
+  }
+  deleteOrd(id:any){
+    console.log(id)
+    this.pedidoService.deleteOrder(id).subscribe((data)=> console.log("borrado") )
 
+    const indexbyId=this.orders.findIndex((x:any) => id === x._id);
+    this.orders.splice(indexbyId,1);
+    console.log(this.orders)
 
   }
 

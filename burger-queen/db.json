@@ -153,10 +153,23 @@
       "dateEntry": "31/10/2022 23:31:59"
     },
     {
-      "_id": "h7y5bnb0w8s",
+      "_id": "3v6n6oan5xs",
       "userId": "123",
-      "client": "Pierre",
+      "client": "Brita",
       "products": [
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 5,
+              "name": "Hamburguesa simple",
+              "price": 10,
+              "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
         {
           "qty": 1,
           "product": [
@@ -174,10 +187,10 @@
           "qty": 1,
           "product": [
             {
-              "id": 11,
-              "name": "Bebida/gaseosa 500ml",
-              "price": 7,
-              "image": "https://cdn-icons-png.flaticon.com/512/1237/1237004.png?w=360",
+              "id": 7,
+              "name": "Papas fritas",
+              "price": 5,
+              "image": "https://cdn.pixabay.com/photo/2013/07/13/01/24/french-fries-155679_960_720.png",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
@@ -187,10 +200,10 @@
           "qty": 1,
           "product": [
             {
-              "id": 8,
-              "name": "Aros de cebolla",
-              "price": 5,
-              "image": "https://cdn.pixabay.com/photo/2021/07/11/03/47/onion-rings-6402796__340.png",
+              "id": 12,
+              "name": "Bebida/gaseosa 750ml",
+              "price": 10,
+              "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
@@ -198,7 +211,7 @@
         }
       ],
       "status": "pending",
-      "dateEntry": "31/10/2022 23:32:50"
+      "dateEntry": "1/11/2022 00:12:01"
     }
   ]
 }
