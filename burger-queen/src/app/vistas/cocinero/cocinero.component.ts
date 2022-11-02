@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { PedidoService } from 'src/app/servicios/api/pedido.service';
 import { Product } from 'src/app/modelos/product.interface';
 
@@ -109,23 +110,13 @@ export class CocineroComponent implements OnInit {
 
 
 
-
-
-
-
     //})
 
 
-
-
-
-
-
-
-
-
-
-
+  }
+  statusChange(e:any, id:any){
+    const valor=e.target.value;
+    console.log(valor, id);
   }
 
   deleteOrd(id:any){

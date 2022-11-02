@@ -1,5 +1,4 @@
 const jsonServer = require('json-server')
-const { constants } = require('karma')
 const server = jsonServer.create()
 const router = jsonServer.router('./db.json')
 const middlewares = jsonServer.defaults()
@@ -123,6 +122,7 @@ server.delete('/orders/:id', async (req, res)=>{
 
     
   } catch (error) {
+    console.log(error)
     
   }
 })
