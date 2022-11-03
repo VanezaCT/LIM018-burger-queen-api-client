@@ -21,7 +21,6 @@ import { OrderComponent } from './vistas/order/order.component';
 import { PedidosComponent } from './vistas/pedidos/pedidos.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

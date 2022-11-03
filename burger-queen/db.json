@@ -2,7 +2,13 @@
   "auth": [
     {
       "email": "leyla@gmail.com",
-      "password": "Leyla1234"
+      "password": "Leyla1234",
+      "type":"mesero"
+    },
+    {
+      "email": "ley@gmail.com",
+      "password": "Leyla12",
+      "type":"cocinero"
     }
   ],
   "products": [
