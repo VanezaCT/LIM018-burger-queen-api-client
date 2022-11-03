@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { PedidoService } from 'src/app/servicios/api/pedido.service';
 import { Product } from 'src/app/modelos/product.interface';
 
@@ -42,16 +43,16 @@ export class CocineroComponent implements OnInit {
   ngOnInit(): void {
     this.pedidoService.getallOrder().subscribe((data) => {
       this.orders = data;
-      //console.log(this.orders)
+      console.log(this.orders)
       // this.ind=this.orders.map((x:any)=>{return x.products})
       //console.log(this.ind)
       // console.log(this.products)
     })
 
-    this.pedidoService.getAllProducts().subscribe((dta) => {
-      this.products = dta;
-      this.iind = this.products.map((y: any) => { return y.name })
-      //console.log(this.iind,this.ind)
+    // this.pedidoService.getAllProducts().subscribe((dta) => {
+    //   this.products = dta;
+    //   this.iind = this.products.map((y: any) => { return y.name })
+    //   //console.log(this.iind,this.ind)
 
 
       // this.newp=this.ind.map(function(subobj:any) {
@@ -71,17 +72,17 @@ export class CocineroComponent implements OnInit {
       //   })
       // }
 
-      for (let i = 0; i < this.orders.length; i++) {
-        if (this.orders[i].products) {
-          this.orders[i].products.map((x: any) => {
-            x.detalle = this.iind[(x.productId - 1)];
-            return x
+      // for (let i = 0; i < this.orders.length; i++) {
+      //   if (this.orders[i].products) {
+      //     this.orders[i].products.map((x: any) => {
+      //       x.detalle = this.iind[(x.productId - 1)];
+      //       return x
 
-          })
-        }
+      //     })
+      //   }
 
 
-      }
+      // }
 
       //console.log(this.newp)
       // for (let i = 0; i < this.newp.length; i++) {
@@ -105,26 +106,26 @@ export class CocineroComponent implements OnInit {
       //   obj.detalle=this.iind[parseInt(s)-1];
       //   return this.orders[obj];
       // })
-      console.log(this.orders)
+      
 
 
 
+    //})
 
 
+  }
+  statusChange(e:any, id:any){
+    const valor=e.target.value;
+    console.log(valor, id);
+  }
 
+  deleteOrd(id:any){
+    console.log(id)
+    this.pedidoService.deleteOrder(id).subscribe((data)=> console.log("borrado") )
 
-    })
-
-
-
-
-
-
-
-
-
-
-
+    const indexbyId=this.orders.findIndex((x:any) => id === x._id);
+    this.orders.splice(indexbyId,1);
+    console.log(this.orders)
 
   }
 

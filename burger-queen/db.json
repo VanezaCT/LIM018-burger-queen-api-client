@@ -111,88 +111,113 @@
   ],
   "orders": [
     {
-      "_id": "eidc2tildgm",
+      "_id": "j3mtce0vp8",
       "userId": "123",
       "client": "Leyla",
       "products": [
         {
-          "productId": 1,
-          "qty": 1
+          "qty": 1,
+          "product": [
+            {
+              "id": 6,
+              "name": "Hamburguesa doble",
+              "price": 15,
+              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
         },
         {
-          "productId": 3,
-          "qty": 2
+          "qty": 1,
+          "product": [
+            {
+              "id": 10,
+              "name": "Agua 750ml",
+              "price": 7,
+              "image": "https://cdn-icons-png.flaticon.com/512/3349/3349504.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
         },
         {
-          "productId": 4,
-          "qty": 1
+          "qty": 1,
+          "product": [
+            {
+              "id": 8,
+              "name": "Aros de cebolla",
+              "price": 5,
+              "image": "https://cdn.pixabay.com/photo/2021/07/11/03/47/onion-rings-6402796__340.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
         }
       ],
       "status": "pending",
-      "dateEntry": "27/10/2022 12:12:34"
+      "dateEntry": "31/10/2022 23:31:59"
     },
     {
-      "_id": "1zykte2y4ge",
-      "userId": "123",
-      "client": "Deysi",
-      "products": [
-        {
-          "productId": 6,
-          "qty": 1
-        },
-        {
-          "productId": 5,
-          "qty": 2
-        },
-        {
-          "productId": 7,
-          "qty": 1
-        },
-        {
-          "productId": 11,
-          "qty": 1
-        }
-      ],
-      "status": "pending",
-      "dateEntry": "27/10/2022 12:18:54"
-    },
-    {
-      "_id": "uph9g8aseu",
-      "userId": "123",
-      "client": "Vanee",
-      "products": [
-        {
-          "productId": 6,
-          "qty": 1
-        },
-        {
-          "productId": 11,
-          "qty": 1
-        }
-      ],
-      "status": "pending",
-      "dateEntry": "27/10/2022 13:32:48"
-    },
-    {
-      "_id": "sj9wtkgie5",
+      "_id": "3v6n6oan5xs",
       "userId": "123",
       "client": "Brita",
       "products": [
         {
-          "productId": 6,
-          "qty": 1
+          "qty": 1,
+          "product": [
+            {
+              "id": 5,
+              "name": "Hamburguesa simple",
+              "price": 10,
+              "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
         },
         {
-          "productId": 12,
-          "qty": 1
+          "qty": 1,
+          "product": [
+            {
+              "id": 6,
+              "name": "Hamburguesa doble",
+              "price": 15,
+              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
         },
         {
-          "productId": 7,
-          "qty": 1
+          "qty": 1,
+          "product": [
+            {
+              "id": 7,
+              "name": "Papas fritas",
+              "price": 5,
+              "image": "https://cdn.pixabay.com/photo/2013/07/13/01/24/french-fries-155679_960_720.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 12,
+              "name": "Bebida/gaseosa 750ml",
+              "price": 10,
+              "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
         }
       ],
       "status": "pending",
-      "dateEntry": "27/10/2022 15:06:45"
+      "dateEntry": "1/11/2022 00:12:01"
     }
   ]
 }
