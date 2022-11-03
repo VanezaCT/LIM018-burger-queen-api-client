@@ -1,8 +1,9 @@
 export interface ResponseI{
-    dataUser: {
+
         
-        
+         status:string,
+    response: string,
         accessToken: string,
         expiresIn: string
-    } 
+    
 }

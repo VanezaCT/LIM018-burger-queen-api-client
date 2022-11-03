@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
-
+import { ApiService } from 'src/app/servicios/api/api.service'; 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-
+import { LoginI } from 'src/app/modelos/login.interface';
+import { ResponseI } from 'src/app/modelos/response.interface';
+import { Token } from '@angular/compiler';
 
 @Component({
   selector: 'app-login',
@@ -18,14 +19,21 @@ export class LoginComponent implements OnInit {
     password : new FormControl('',Validators.required)
   })
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private api:ApiService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  onLogin(form : any){
-    
-    console.log(form.email, form.password)
+  onLogin(form: any){
+    this.api.loginByEmail(form).subscribe(data=>{
+      console.log(data);
+      //let dataResponse: ResponseI=data
+      if (data.accessToken='ok'){
+        localStorage.setItem('token',data.accessToken)
+        this.router.navigate(['mesero'])
+      }
+    })
+    /*console.log(form.email, form.password)
      this.http.get<any>("http://localhost:3000/auth", {
       headers: {
         Authorization: "Bearer EsUnSecreto"
@@ -40,7 +48,7 @@ export class LoginComponent implements OnInit {
         alert("Usuario no encontrado")
       
       }
-    });
+    });*/
     
   }
 

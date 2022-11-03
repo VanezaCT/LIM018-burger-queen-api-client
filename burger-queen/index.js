@@ -11,7 +11,7 @@ server.use(middlewares)
 
 server.use((req, res, next) => {
 
-  console.log(req.headers);
+ // console.log(req.headers);
 
 
   if (req.method === "POST" && req.path === "/auth") {
