@@ -1,9 +1,9 @@
-export interface ResponseI{
+export interface ResponseI {
 
-        
-         status:string,
+
+    token: string,
     response: string,
-        accessToken: string,
-        expiresIn: string
-    
+    accessToken: string,
+    expiresIn: string
+
 }

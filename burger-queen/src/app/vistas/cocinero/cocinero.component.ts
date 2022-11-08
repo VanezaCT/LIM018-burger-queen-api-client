@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { NgModel, UntypedFormBuilder } from '@angular/forms';
 import { PedidoService } from 'src/app/servicios/api/pedido.service';
 import { Product } from 'src/app/modelos/product.interface';
 
@@ -32,8 +32,8 @@ export class CocineroComponent implements OnInit {
   }
   orders: any = [{}];
   listaproductos: any = [];
-  ind: any;
-  iind: any;
+ 
+  upOrd: any = {};
 
 
 
@@ -44,7 +44,7 @@ export class CocineroComponent implements OnInit {
     this.pedidoService.getallOrder().subscribe((data) => {
       this.orders = data;
       console.log(this.orders)
-      // this.ind=this.orders.map((x:any)=>{return x.products})
+      // 
       //console.log(this.ind)
       // console.log(this.products)
     })
@@ -55,58 +55,53 @@ export class CocineroComponent implements OnInit {
     //   //console.log(this.iind,this.ind)
 
 
-      // this.newp=this.ind.map(function(subobj:any) {
-      //   return subobj.map(function(d:any) {
-      //     return d.productId
-
-      //   })
-      // })
-
-      // if(this.orders.some((elem:any) => elem.products.productId == this.products.id)){
-      //   this.orders.products.map((m:any) =>{
-      //     return m.products.map((x:any)=>{
-      //       x.detalle=this.products[(x.productId-1)];
-
-      //       return x;
-      //     })
-      //   })
-      // }
-
-      // for (let i = 0; i < this.orders.length; i++) {
-      //   if (this.orders[i].products) {
-      //     this.orders[i].products.map((x: any) => {
-      //       x.detalle = this.iind[(x.productId - 1)];
-      //       return x
-
-      //     })
-      //   }
 
 
-      // }
+    // if(this.orders.some((elem:any) => elem.products.productId == this.products.id)){
+    //   this.orders.products.map((m:any) =>{
+    //     return m.products.map((x:any)=>{
+    //       x.detalle=this.products[(x.productId-1)];
 
-      //console.log(this.newp)
-      // for (let i = 0; i < this.newp.length; i++) {
-      //   for (let j = 0; j < this.newp[i].length; j++) {
-      //    const a =this.newp[i][j];
-      //     this.newp2.push(a)
-      //   }
+    //       return x;
+    //     })
+    //   })
+    // }
 
-      // }
-      //console.log(this.newp2);
-      // this.papu=this.newp2.map((s:any)=>{
-      //   const obj:any={};
-      //   obj.detalle=this.iind[parseInt(s)-1];
-      //   return obj;
-      // })
+    // for (let i = 0; i < this.orders.length; i++) {
+    //   if (this.orders[i].products) {
+    //     this.orders[i].products.map((x: any) => {
+    //       x.detalle = this.iind[(x.productId - 1)];
+    //       return x
 
-      //this.nwpapu=this.papu.map((o:any)=>{return o.detalle});
+    //     })
+    //   }
 
-      // this.orders.map((s:any)=>{
-      //   const obj:any={};
-      //   obj.detalle=this.iind[parseInt(s)-1];
-      //   return this.orders[obj];
-      // })
-      
+
+    // }
+
+    //console.log(this.newp)
+    // for (let i = 0; i < this.newp.length; i++) {
+    //   for (let j = 0; j < this.newp[i].length; j++) {
+    //    const a =this.newp[i][j];
+    //     this.newp2.push(a)
+    //   }
+
+    // }
+    //console.log(this.newp2);
+    // this.papu=this.newp2.map((s:any)=>{
+    //   const obj:any={};
+    //   obj.detalle=this.iind[parseInt(s)-1];
+    //   return obj;
+    // })
+
+    //this.nwpapu=this.papu.map((o:any)=>{return o.detalle});
+
+    // this.orders.map((s:any)=>{
+    //   const obj:any={};
+    //   obj.detalle=this.iind[parseInt(s)-1];
+    //   return this.orders[obj];
+    // })
+
 
 
 
@@ -114,17 +109,60 @@ export class CocineroComponent implements OnInit {
 
 
   }
-  statusChange(e:any, id:any){
-    const valor=e.target.value;
-    console.log(valor, id);
+  statusChange(e: any, id: any) {
+    const valor = e.target.value;
+    console.log(valor, id, this.orders);
+
+    const ordbyId=this.orders.filter((or:any)=>{return or._id==id})
+   
+
+    // ordbyId.map((x:any)=>{return x.status =valor})
+
+    console.log(ordbyId)
+
+    const mappro=ordbyId.map((pro: any)=>{return pro.products})
+
+    const mapprodu=ordbyId.map((pro: any)=>{return pro.products.product})
+
+    console.log(mapprodu);
+    
+
+   
+
+    
+
+    mappro.map((x:any)=>{
+      const ob:any={};
+      ob.qty=x.qty
+      
+      return ob
+
+    })
+    console.log(mappro)
+    
+
+    
+
+    // this.pedidoService.updateOrder(id, ordbyId)
+    // .subscribe(data => {
+    //   console.log("update", data)
+    // })
+
+
+ 
+
+
+
+
+
   }
 
-  deleteOrd(id:any){
+  deleteOrd(id: any) {
     console.log(id)
-    this.pedidoService.deleteOrder(id).subscribe((data)=> console.log("borrado") )
+    this.pedidoService.deleteOrder(id).subscribe((data) => console.log("borrado"))
 
-    const indexbyId=this.orders.findIndex((x:any) => id === x._id);
-    this.orders.splice(indexbyId,1);
+    const indexbyId = this.orders.findIndex((x: any) => id === x._id);
+    this.orders.splice(indexbyId, 1);
     console.log(this.orders)
 
   }

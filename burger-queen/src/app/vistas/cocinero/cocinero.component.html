@@ -35,28 +35,28 @@
                     <li class="radio-item">
                         <input type="radio" value="pending" name="status{{order._id}}" id="{{order._id}}1" checked>
                         <label for="{{order._id}}1">
-                            {{order.status}}
+                            pendiente
                         </label>
                     </li>
                     <li class="radio-item">
                         <input type="radio" value="canceled" name="status{{order._id}}" id="{{order._id}}2"
                             (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}2">
-                            canceled
+                            cancelado
                         </label>
                     </li>
                     <li class="radio-item">
                         <input type="radio" value="delivering" name="status{{order._id}}" id="{{order._id}}3"
                             (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}3">
-                            delivering
+                            Entregando
                         </label>
                     </li>
                     <li class="radio-item">
                         <input type="radio" value="delivered" name="status{{order._id}}" id="{{order._id}}4"
                             (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}4">
-                            delivered
+                            Entregado
                         </label>
                     </li>
                 </ul>
