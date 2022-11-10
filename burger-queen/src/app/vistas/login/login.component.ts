@@ -33,22 +33,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['mesero'])
       }
     })
-    /*console.log(form.email, form.password)
-     this.http.get<any>("http://localhost:3000/auth", {
-      headers: {
-        Authorization: "Bearer EsUnSecreto"
-      }
-    }).subscribe(res =>{
-       const user =res.find((a:any)=>{return a.email==form.email && a.password==form.password})
 
-       if(user){
-        this.router.navigate(['mesero'])
-      
-      }else{
-        alert("Usuario no encontrado")
-      
-      }
-    });*/
     
   }
 

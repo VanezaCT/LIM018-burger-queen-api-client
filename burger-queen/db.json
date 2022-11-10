@@ -3,12 +3,12 @@
     {
       "email": "leyla@gmail.com",
       "password": "Leyla1234",
-      "type":"mesero"
+      "type": "mesero"
     },
     {
       "email": "ley@gmail.com",
       "password": "Leyla12",
-      "type":"cocinero"
+      "type": "cocinero"
     }
   ],
   "products": [
@@ -111,19 +111,19 @@
   ],
   "orders": [
     {
-      "_id": "j3mtce0vp8",
+      "_id": "cue9dxbem4",
       "userId": "123",
-      "client": "Leyla",
+      "client": "vaneza",
       "products": [
         {
           "qty": 1,
           "product": [
             {
-              "id": 6,
-              "name": "Hamburguesa doble",
-              "price": 15,
-              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
-              "type": "Almuerzo y cena",
+              "id": 2,
+              "name": "Café con leche",
+              "price": 7,
+              "image": "https://static.wixstatic.com/media/9ffb4a_1be51afcabf1414594091b2ce0d9f6e4~mv2.png/v1/fill/w_480,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Vector%20Smart%20Object-2.png",
+              "type": "Desayuno",
               "dateEntry": ""
             }
           ]
@@ -132,15 +132,107 @@
           "qty": 1,
           "product": [
             {
-              "id": 10,
-              "name": "Agua 750ml",
-              "price": 7,
-              "image": "https://cdn-icons-png.flaticon.com/512/3349/3349504.png",
-              "type": "Almuerzo y cena",
+              "id": 3,
+              "name": "Sandwich de jamón y queso",
+              "price": 10,
+              "image": "https://png.pngtree.com/png-clipart/20220823/original/pngtree-double-beef-sandwich-vector-png-png-image_8452348.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "7/11/2022, 14:52:40"
+    },
+    {
+      "_id": "poqzsfvu528",
+      "userId": "123",
+      "client": "Summy",
+      "products": [
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 3,
+              "name": "Sandwich de jamón y queso",
+              "price": 10,
+              "image": "https://png.pngtree.com/png-clipart/20220823/original/pngtree-double-beef-sandwich-vector-png-png-image_8452348.png",
+              "type": "Desayuno",
               "dateEntry": ""
             }
           ]
         },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 1,
+              "name": "Café americano",
+              "price": 5,
+              "image": "https://trigodeoro.com.pe/wp-content/uploads/2020/09/taza-de-cafe-trigo-de-oro.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "7/11/2022, 15:29:39"
+    },
+    {
+      "_id": "5zjmwvz2eyo",
+      "userId": "123",
+      "client": "Jose",
+      "products": [
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 2,
+              "name": "Café con leche",
+              "price": 7,
+              "image": "https://static.wixstatic.com/media/9ffb4a_1be51afcabf1414594091b2ce0d9f6e4~mv2.png/v1/fill/w_480,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Vector%20Smart%20Object-2.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 3,
+              "name": "Sandwich de jamón y queso",
+              "price": 10,
+              "image": "https://png.pngtree.com/png-clipart/20220823/original/pngtree-double-beef-sandwich-vector-png-png-image_8452348.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 2,
+          "product": [
+            {
+              "id": 1,
+              "name": "Café americano",
+              "price": 5,
+              "image": "https://trigodeoro.com.pe/wp-content/uploads/2020/09/taza-de-cafe-trigo-de-oro.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "7/11/2022, 17:53:13"
+    },
+    {
+      "_id": "ixdvtkrm11",
+      "userId": "123",
+      "client": "Alberto",
+      "products": [
         {
           "qty": 1,
           "product": [
@@ -153,37 +245,15 @@
               "dateEntry": ""
             }
           ]
-        }
-      ],
-      "status": "pending",
-      "dateEntry": "31/10/2022 23:31:59"
-    },
-    {
-      "_id": "3v6n6oan5xs",
-      "userId": "123",
-      "client": "Brita",
-      "products": [
-        {
-          "qty": 1,
-          "product": [
-            {
-              "id": 5,
-              "name": "Hamburguesa simple",
-              "price": 10,
-              "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
-              "type": "Almuerzo y cena",
-              "dateEntry": ""
-            }
-          ]
         },
         {
           "qty": 1,
           "product": [
             {
-              "id": 6,
-              "name": "Hamburguesa doble",
-              "price": 15,
-              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
+              "id": 11,
+              "name": "Bebida/gaseosa 500ml",
+              "price": 7,
+              "image": "https://cdn-icons-png.flaticon.com/512/1237/1237004.png?w=360",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
@@ -206,10 +276,10 @@
           "qty": 1,
           "product": [
             {
-              "id": 12,
-              "name": "Bebida/gaseosa 750ml",
-              "price": 10,
-              "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
+              "id": 6,
+              "name": "Hamburguesa doble",
+              "price": 15,
+              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
@@ -217,7 +287,7 @@
         }
       ],
       "status": "pending",
-      "dateEntry": "1/11/2022 00:12:01"
+      "dateEntry": "7/11/2022, 18:10:22"
     }
   ]
 }

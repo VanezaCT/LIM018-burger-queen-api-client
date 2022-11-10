@@ -11,7 +11,7 @@ server.use(middlewares)
 
 server.use((req, res, next) => {
 
- // console.log(req.headers);
+console.log(req.headers);
 
 
   if (req.method === "POST" && req.path === "/auth") {
@@ -32,6 +32,7 @@ server.use((req, res, next) => {
 
 server.post('/auth', (req, res) => {
 
+
   if (
     req.body.email === 'leyla@gmail.com' && req.body.password === 'Leyla1234') {
     res.jsonp({
@@ -41,14 +42,17 @@ server.post('/auth', (req, res) => {
 
 
 })
+
+
+
 server.post('/orders', async (req, res) => {
   try {
     const prod = router.db.get('products').__wrapped__.products;
-    const prodBody =req.body.products;
-   
-   
+    const prodBody = req.body.products;
 
-  
+
+
+
     // const newProduct=prod.map((pro)=>{
     //   const objPro={
     //     qty: pro.qty,
@@ -57,23 +61,23 @@ server.post('/orders', async (req, res) => {
     //   return objPro
     // })
 
-    
-      
-        const newProduct=prodBody.map((x) => {
-          const objnew={
-            qty:x.qty,
-            product: prod.filter((p)=>{return p.id ==x.productId})
-          }
-          return objnew
-
-        });
-      
 
 
-    
+    const newProduct = prodBody.map((x) => {
+      const objnew = {
+        qty: x.qty,
+        product: prod.filter((p) => { return p.id == x.productId })
+      }
+      return objnew
 
-   
-    
+    });
+
+
+
+
+
+
+
 
     const today = new Date();
     const now = today.toLocaleString();
@@ -88,7 +92,7 @@ server.post('/orders', async (req, res) => {
     };
 
     const orders = router.db.get('orders');
-    
+
 
 
 
@@ -104,26 +108,26 @@ server.post('/orders', async (req, res) => {
     res.status(401).send("No hay cabecera de autenticación");
   }
 });
-server.delete('/orders/:id', async (req, res)=>{
+server.delete('/orders/:id', async (req, res) => {
   try {
     const orders = router.db.get('orders');
-    const ord=orders.__wrapped__.orders
-    const id=req.params.id;
-    
-    
+    const ord = orders.__wrapped__.orders
+    const id = req.params.id;
 
-    const orderbyId=ord.filter((p)=>{return p._id == id})
-    const indexbyId=ord.findIndex(x => id === x._id)
+
+
+    const orderbyId = ord.filter((p) => { return p._id == id })
+    const indexbyId = ord.findIndex(x => id === x._id)
     console.log(indexbyId, "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 
     orders.__wrapped__.orders.splice(indexbyId, 1);
     await orders.write();
     res.status(200).jsonp(orderbyId)
 
-    
+
   } catch (error) {
     console.log(error)
-    
+
   }
 })
 
