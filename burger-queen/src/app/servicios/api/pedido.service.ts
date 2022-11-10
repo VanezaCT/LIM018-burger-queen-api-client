@@ -57,5 +57,25 @@ export class PedidoService {
     })
 
   }
+  getAllUsers(){
+    const tkn=localStorage.getItem('token');
+    return this.http.get<any>('http://localhost:3000/users', {
+      headers: {
+        Authorization: `Bearer ${tkn}`
+      }
+    })
+
+
+  }
+  deleteUser(id: any){
+    const tkn=localStorage.getItem('token');
+    return this.http.delete<boolean>('http://localhost:3000/users/'+id,  {
+      headers: {
+        Authorization: `Bearer ${tkn}`
+      }
+    })
+
+  }
+
 
 }

@@ -37,6 +37,9 @@ export class LoginComponent implements OnInit {
       if(accTkn == "Cocinero") {
         this.router.navigate(['cocinero'])
       }
+      if(accTkn == "Admin") {
+        this.router.navigate(['admin'])
+      }
       else{
         alert("Usuario no registrado")
       }

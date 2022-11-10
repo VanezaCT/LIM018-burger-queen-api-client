@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel, UntypedFormBuilder } from '@angular/forms';
 import { PedidoService } from 'src/app/servicios/api/pedido.service';
-import { Product } from 'src/app/modelos/product.interface';
 
 @Component({
   selector: 'app-cocinero',
@@ -34,6 +32,7 @@ export class CocineroComponent implements OnInit {
   listaproductos: any = [];
  
   upOrd: any = {};
+  //isShowDiv: any
 
 
 
@@ -48,6 +47,10 @@ export class CocineroComponent implements OnInit {
       //console.log(this.ind)
       // console.log(this.products)
     })
+
+    
+    
+    
 
     // this.pedidoService.getAllProducts().subscribe((dta) => {
     //   this.products = dta;
@@ -116,37 +119,46 @@ export class CocineroComponent implements OnInit {
     const ordbyId=this.orders.filter((or:any)=>{return or._id==id})
    
 
-    // ordbyId.map((x:any)=>{return x.status =valor})
+     ordbyId.map((x:any)=>{return x.status =valor})
 
-    console.log(ordbyId)
+    console.log(ordbyId[0])
 
-    const mappro=ordbyId.map((pro: any)=>{return pro.products})
 
-    const mapprodu=ordbyId.map((pro: any)=>{return pro.products.product})
-
-    console.log(mapprodu);
-    
-
-   
-
-    
-
-    mappro.map((x:any)=>{
-      const ob:any={};
-      ob.qty=x.qty
-      
-      return ob
-
-    })
-    console.log(mappro)
-    
-
-    
-
-    // this.pedidoService.updateOrder(id, ordbyId)
-    // .subscribe(data => {
-    //   console.log("update", data)
+    // const pro=ordbyId.map((y:any)=>{
+    //   return y.products
     // })
+
+    // const mappro=ordbyId.map((pro: any)=>{
+    //    pro.products.map((p:any)=>{
+    //     p.product.map((x:any)=>{
+    //        pro.products= x.id
+    //     })
+      
+    //    })
+    // })
+
+    //const mapprodu=mappro.map((p: any)=>{return p.id})
+
+    //console.log(mappro, pro);
+    //console.log(mapprodu);
+    
+
+    // pro.map((x:any)=>{
+    //   const ob:any={};
+    //   ob.qty=x.qty
+      
+    //   return ob
+
+    // })
+    // console.log(pro)
+    
+
+    
+
+    this.pedidoService.updateOrder(id, ordbyId[0])
+    .subscribe(data => {
+      console.log("update", data)
+    })
 
 
  
@@ -166,5 +178,17 @@ export class CocineroComponent implements OnInit {
     console.log(this.orders)
 
   }
+  //showBtnStatus(id:any){
+   
+    // this.isShowDiv[0]= !this.isShowDiv[0];  
+    // console.log(this.isShowDiv);
+    // this.isShowDiv=new Array(this.orders.length).fill(false)
+    // console.log(this.isShowDiv);
+    // const indexbyId = this.orders.findIndex((x: any) => id === x._id);
+
+    //  this.isShowDiv[indexbyId]= !this.isShowDiv[indexbyId]; 
+
+    
+  //}
 
 }

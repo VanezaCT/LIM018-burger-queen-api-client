@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdministradorComponent } from './administrador.component';
+import { HeadercocineroComponent } from './headercocinero.component';
 
-describe('AdministradorComponent', () => {
-  let component: AdministradorComponent;
-  let fixture: ComponentFixture<AdministradorComponent>;
+describe('HeadercocineroComponent', () => {
+  let component: HeadercocineroComponent;
+  let fixture: ComponentFixture<HeadercocineroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdministradorComponent ]
+      declarations: [ HeadercocineroComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdministradorComponent);
+    fixture = TestBed.createComponent(HeadercocineroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

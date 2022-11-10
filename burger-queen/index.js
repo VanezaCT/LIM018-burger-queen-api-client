@@ -164,7 +164,7 @@ server.put('/orders/:id', async (req, res) => {
   console.log( orders.__wrapped__.orders, indexbyId)
 
   await orders.write();
-  // res.status(200).jsonp(upOrds);
+   res.status(200).jsonp(upOrds);
 
 
 
@@ -195,6 +195,30 @@ server.delete('/orders/:id', async (req, res) => {
     orders.__wrapped__.orders.splice(indexbyId, 1);
     await orders.write();
     res.status(200).jsonp(orderbyId)
+
+
+  } catch (error) {
+    console.log(error)
+
+  }
+})
+
+
+server.delete('/users/:id', async (req, res) => {
+  try {
+    const users = router.db.get('users');
+    const use = users.__wrapped__.users
+    const id = req.params.id;
+
+
+
+    const userbyId = use.filter((p) => { return p._id == id })
+    const indexbyId = use.findIndex(x => id === x._id)
+    console.log(indexbyId, "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
+    users.__wrapped__.users.splice(indexbyId, 1);
+    await users.write();
+    res.status(200).jsonp(userbyId)
 
 
   } catch (error) {
