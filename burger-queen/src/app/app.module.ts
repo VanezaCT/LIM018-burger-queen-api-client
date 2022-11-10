@@ -12,13 +12,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CocineroComponent } from './vistas/cocinero/cocinero.component';
-import { AdministradorComponent } from './vistas/administrador/administrador.component';
 import { MeseroComponent} from './vistas/mesero/mesero.component';
 import { ProductsComponent } from './vistas/products/products.component';
 
 import { OrdmeseroComponent } from './vistas/ordmesero/ordmesero.component';
 import { OrderComponent } from './vistas/order/order.component';
 import { PedidosComponent } from './vistas/pedidos/pedidos.component';
+import { AdminComponent } from './vistas/admin/admin.component';
+import { HeadercocineroComponent } from './vistas/headercocinero/headercocinero.component';
+import { HeaderadminComponent } from './vistas/headeradmin/headeradmin.component';
 
 
 @NgModule({
@@ -30,13 +32,15 @@ import { PedidosComponent } from './vistas/pedidos/pedidos.component';
     NuevoComponent,
    // ModelosComponent,
     CocineroComponent,
-    AdministradorComponent,
     MeseroComponent,
     ProductsComponent,
     OrdmeseroComponent,
     OrderComponent,
     PedidosComponent,
-    HeaderComponent
+    HeaderComponent,
+    AdminComponent,
+    HeadercocineroComponent,
+    HeaderadminComponent
 
 
   ],

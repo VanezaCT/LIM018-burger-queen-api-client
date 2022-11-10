@@ -1,32 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
+
 td button {
     background-color: transparent;
     border: 0px;
 }
 
 table {
-    font-size: 120%;
-    margin: 30px;
-    width: 100%;
-    max-width: 89em;
-    min-width: 31em;
-    border-collapse: collapse;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(253, 250, 245, 0.836);
     border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    margin-top:8em;
+    font-weight: bold;
+    font-size: 120%;
+    min-width: 31em;
+    box-shadow: 0 0 10px rgb(185, 94, 8);
+    padding: 1%;
+    
+
+    
+    
+    
 }
 
 th {
-    font-size: 130%;
-    font-weight: lighter;
-    padding: 5px;
-    background: #f85e11c2;
-    border-bottom: 3px solid #fff;
-    color: rgb(242, 244, 247);
-    text-align: center;
+    background-color: rgb(255, 60, 0);
+    color: white;
+    margin: 1px;
+    border-radius: 8px;
 }
 
 td {
     padding: 8px;
-    background: beige;
-    border-bottom: 1px solid #fff;
+    background: rgb(255, 255, 254);
+    
     color: #c65314;
     border-top: 1px solid transparent;
     text-align: center;
@@ -41,14 +49,15 @@ tr:hover td {
 }
 
 #btnOrder {
-    background: #f85e11c2;
+    background: #fa8500fa;
     padding: 4%;
     color: white;
     font-size: 130%;
     font-weight: lighter;
-    margin-left: 50%;
+    margin-left: 35%;
     border-radius: 20px;
     border: 0;
+    margin-top: 10%;
 }
 
 #btnOrder:hover {

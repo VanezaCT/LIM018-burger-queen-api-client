@@ -23,5 +23,8 @@ mostrarOrden(){
     
 })
 }
+signOut(){
+  localStorage.clear()
+}
 
 }

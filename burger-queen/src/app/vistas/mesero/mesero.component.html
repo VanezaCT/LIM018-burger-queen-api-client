@@ -15,11 +15,14 @@
             <button (click)="mostrarAlmuerzoycena()">Almuerzo</button>
         </div>
 
-        <div class="products--grid">
+        <hr><div class="products--grid">
 
             <app-products [product]="product" *ngFor="let product of products" (addedProduct)="onAddtoShopping($event)">
             </app-products>
         </div>
+    <hr>
+
+        
 
         <p>
             Pedido: {{myOrder.length}}
@@ -27,7 +30,7 @@
 
 
         
-
+        
     </div>
     
     

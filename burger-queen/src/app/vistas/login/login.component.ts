@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/servicios/api/api.service'; 
+import { ApiService } from 'src/app/servicios/api/api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -15,23 +15,38 @@ import { Token } from '@angular/compiler';
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    email : new FormControl('',Validators.required),
-    password : new FormControl('',Validators.required)
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   })
 
-  constructor(private api:ApiService, private router:Router) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onLogin(form: any){
-    this.api.loginByEmail(form).subscribe(data=>{
+  onLogin(form: any) {
+    this.api.loginByEmail(form).subscribe(data => {
       console.log(data);
-      //let dataResponse: ResponseI=data
-      if (data.accessToken='ok'){
-        localStorage.setItem('token',data.accessToken)
+      const accTkn = data.token;
+
+      localStorage.setItem('token', accTkn)
+
+      if (accTkn == "Mesero") {
         this.router.navigate(['mesero'])
       }
+      if(accTkn == "Cocinero") {
+        this.router.navigate(['cocinero'])
+      }
+      if(accTkn == "Admin") {
+        this.router.navigate(['admin'])
+      }
+      else{
+        alert("Usuario no registrado")
+      }
+
+
+      
+
     })
     /*console.log(form.email, form.password)
      this.http.get<any>("http://localhost:3000/auth", {
@@ -49,7 +64,7 @@ export class LoginComponent implements OnInit {
       
       }
     });*/
-    
+
   }
 
 }

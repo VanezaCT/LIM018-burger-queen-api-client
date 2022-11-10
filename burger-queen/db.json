@@ -1,14 +1,19 @@
 {
   "auth": [
     {
-      "email": "leyla@gmail.com",
-      "password": "Leyla1234",
-      "type":"mesero"
+      "email": "mesero1@gmail.com",
+      "password": "Mesero1234",
+      "type": "mesero"
     },
     {
-      "email": "ley@gmail.com",
-      "password": "Leyla12",
-      "type":"cocinero"
+      "email": "cocinero1@gmail.com",
+      "password": "Cocinero1234",
+      "type": "cocinero"
+    },
+    {
+      "email": "leyla@gmail.com",
+      "password": "Leyla1234",
+      "type": "admin"
     }
   ],
   "products": [
@@ -111,18 +116,18 @@
   ],
   "orders": [
     {
-      "_id": "j3mtce0vp8",
+      "_id": "8bd2toy2t09",
       "userId": "123",
-      "client": "Leyla",
+      "client": "Dele",
       "products": [
         {
           "qty": 1,
           "product": [
             {
-              "id": 6,
-              "name": "Hamburguesa doble",
-              "price": 15,
-              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
+              "id": 5,
+              "name": "Hamburguesa simple",
+              "price": 10,
+              "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
@@ -145,37 +150,24 @@
           "qty": 1,
           "product": [
             {
-              "id": 8,
-              "name": "Aros de cebolla",
+              "id": 7,
+              "name": "Papas fritas",
               "price": 5,
-              "image": "https://cdn.pixabay.com/photo/2021/07/11/03/47/onion-rings-6402796__340.png",
+              "image": "https://cdn.pixabay.com/photo/2013/07/13/01/24/french-fries-155679_960_720.png",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
           ]
         }
       ],
-      "status": "pending",
-      "dateEntry": "31/10/2022 23:31:59"
+      "status": "delivered",
+      "dateEntry": "8/11/2022 22:41:36"
     },
     {
-      "_id": "3v6n6oan5xs",
+      "_id": "aigracqfazk",
       "userId": "123",
-      "client": "Brita",
+      "client": "Judi",
       "products": [
-        {
-          "qty": 1,
-          "product": [
-            {
-              "id": 5,
-              "name": "Hamburguesa simple",
-              "price": 10,
-              "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
-              "type": "Almuerzo y cena",
-              "dateEntry": ""
-            }
-          ]
-        },
         {
           "qty": 1,
           "product": [
@@ -206,10 +198,10 @@
           "qty": 1,
           "product": [
             {
-              "id": 12,
-              "name": "Bebida/gaseosa 750ml",
-              "price": 10,
-              "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
+              "id": 11,
+              "name": "Bebida/gaseosa 500ml",
+              "price": 7,
+              "image": "https://cdn-icons-png.flaticon.com/512/1237/1237004.png?w=360",
               "type": "Almuerzo y cena",
               "dateEntry": ""
             }
@@ -217,7 +209,72 @@
         }
       ],
       "status": "pending",
-      "dateEntry": "1/11/2022 00:12:01"
+      "dateEntry": "8/11/2022 22:41:50"
+    },
+    {
+      "_id": "7c2qv1kjx8b",
+      "userId": "123",
+      "client": "Leyla ",
+      "products": [
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 2,
+              "name": "Café con leche",
+              "price": 7,
+              "image": "https://static.wixstatic.com/media/9ffb4a_1be51afcabf1414594091b2ce0d9f6e4~mv2.png/v1/fill/w_480,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Vector%20Smart%20Object-2.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 2,
+          "product": [
+            {
+              "id": 3,
+              "name": "Sandwich de jamón y queso",
+              "price": 10,
+              "image": "https://png.pngtree.com/png-clipart/20220823/original/pngtree-double-beef-sandwich-vector-png-png-image_8452348.png",
+              "type": "Desayuno",
+              "dateEntry": ""
+            }
+          ]
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "8/11/2022 22:42:03"
+    }
+  ],
+  "users": [
+    {
+      "_id": "1",
+      "email": "leyla@gmail.com",
+      "roles": {
+        "admin": true
+      }
+    },
+    {
+      "_id": "2",
+      "email": "magaly@gmail.com",
+      "roles": {
+        "admin": false
+      }
+    },
+    {
+      "_id": "3",
+      "email": "jose@gmail.com",
+      "roles": {
+        "admin": false
+      }
+    },
+    {
+      "_id": "4",
+      "email": "Mary@gmail.com",
+      "roles": {
+        "admin": false
+      }
     }
   ]
 }

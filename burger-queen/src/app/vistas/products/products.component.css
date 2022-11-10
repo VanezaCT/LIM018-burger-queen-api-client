@@ -1,6 +1,7 @@
 #divProducts {
 
-    background-color: rgba(255, 255, 255, 0.808);
+    background: rgb(247, 244, 241);
+
     text-align: center;
     min-height: 14em;
     min-width: 12em;
@@ -10,8 +11,9 @@
 
 
 #divProducts:hover {
-    background-color: #fffffffb;
+    background-color: #fcfcfcfb;
     color: black;
+    box-shadow: 0 0 20px rgb(255, 205, 68);
     
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
