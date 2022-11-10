@@ -1,10 +1,11 @@
-<app-header></app-header>
+<app-headercocinero></app-headercocinero>
 <div class="container">
 
     <div class="orders-grid">
 
 
         <div *ngFor="let order of orders" class="orders">
+            <article> {{order.dateEntry}}</article>
             <h1> {{order.client}} </h1>
 
             <table>
@@ -31,41 +32,52 @@
             </table>
 
             <div class="status-div">
-                <ul id="filter1" class="status-ul">
+                
+                
+                <ul id="filter1" class="status-ul" >
                     <li class="radio-item">
-                        <input type="radio" value="pending" name="status{{order._id}}" id="{{order._id}}1" checked>
+                        <input type="radio" value="pending" name="status{{order._id}}" id="{{order._id}}1" 
+                        (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}1">
-                            {{order.status}}
+                            pendiente
                         </label>
                     </li>
                     <li class="radio-item">
                         <input type="radio" value="canceled" name="status{{order._id}}" id="{{order._id}}2"
                             (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}2">
-                            canceled
+                            cancelado
                         </label>
                     </li>
                     <li class="radio-item">
                         <input type="radio" value="delivering" name="status{{order._id}}" id="{{order._id}}3"
                             (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}3">
-                            delivering
+                            Entregando
                         </label>
                     </li>
                     <li class="radio-item">
                         <input type="radio" value="delivered" name="status{{order._id}}" id="{{order._id}}4"
                             (change)="statusChange($event, order._id)">
                         <label for="{{order._id}}4">
-                            delivered
+                            Entregado
                         </label>
                     </li>
+                    
                 </ul>
+                <caption>Estado: {{order.status}}</caption>
 
 
             </div>
 
-            <h3> {{order.dateEntry}}</h3>
-            <h2>{{order._id}}</h2>
+            
+           
+           
+
+
+
+        
+           
 
             
 

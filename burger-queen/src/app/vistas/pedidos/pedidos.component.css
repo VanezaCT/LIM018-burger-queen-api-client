@@ -8,7 +8,7 @@
     content: "";
     background-image: url(https://img.freepik.com/foto-gratis/concepto-comida-rapida-restaurante-frito-grasiento-sacado-como-aros-cebolla-hamburguesas-pollo-frito-papas-fritas-como-simbolo-tentacion-dietetica-que-resulta-nutricion-poco-saludable_639032-2410.jpg?w=2000);
     background-size:cover;
-    filter: blur(8px)  contrast(70%)     ;
+    filter: blur(8px)  contrast(75%)     ;
     background-attachment: fixed;
     width: 100%;
     height: 100%;
@@ -26,10 +26,10 @@
     
 }
 .orders{
-    background-color: rgba(255, 255, 255, 0.589);
+    background-color: rgba(255, 255, 255, 0.658);
     border-radius: 10px;
     margin: 16px;
-    padding: 2%;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

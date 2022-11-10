@@ -34,6 +34,9 @@ export class MeseroComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.pedidoService.getAllProducts()
+      .subscribe(data => {
+        this.products = data})
 
     
   }
