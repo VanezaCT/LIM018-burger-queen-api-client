@@ -208,7 +208,7 @@
           ]
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "dateEntry": "8/11/2022 22:41:50"
     },
     {
@@ -243,8 +243,82 @@
           ]
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "dateEntry": "8/11/2022 22:42:03"
+    },
+    {
+      "_id": "drmjajt1e3f",
+      "userId": "123",
+      "client": "Deysi",
+      "products": [
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 6,
+              "name": "Hamburguesa doble",
+              "price": 15,
+              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 5,
+              "name": "Hamburguesa simple",
+              "price": 10,
+              "image": "https://images.vectorhq.com/images/previews/d1c/cheese-burger-clip-art-99194.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 7,
+              "name": "Papas fritas",
+              "price": 5,
+              "image": "https://cdn.pixabay.com/photo/2013/07/13/01/24/french-fries-155679_960_720.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 8,
+              "name": "Aros de cebolla",
+              "price": 5,
+              "image": "https://cdn.pixabay.com/photo/2021/07/11/03/47/onion-rings-6402796__340.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 1,
+          "product": [
+            {
+              "id": 12,
+              "name": "Bebida/gaseosa 750ml",
+              "price": 10,
+              "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "19/11/2022 22:53:10"
     }
   ],
   "users": [
@@ -265,13 +339,6 @@
     {
       "_id": "3",
       "email": "jose@gmail.com",
-      "roles": {
-        "admin": false
-      }
-    },
-    {
-      "_id": "4",
-      "email": "Mary@gmail.com",
       "roles": {
         "admin": false
       }
