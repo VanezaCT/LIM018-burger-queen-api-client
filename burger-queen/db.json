@@ -319,6 +319,41 @@
       ],
       "status": "pending",
       "dateEntry": "19/11/2022 22:53:10"
+    },
+    {
+      "_id": "knwdqrla2vi",
+      "userId": "123",
+      "client": "ayr",
+      "products": [
+        {
+          "qty": 2,
+          "product": [
+            {
+              "id": 6,
+              "name": "Hamburguesa doble",
+              "price": 15,
+              "image": "https://images.vexels.com/media/users/3/152411/isolated/preview/4a22d435331dde73ae0f1cebbdbaacff-icono-de-hamburguesa-doble.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        },
+        {
+          "qty": 2,
+          "product": [
+            {
+              "id": 12,
+              "name": "Bebida/gaseosa 750ml",
+              "price": 10,
+              "image": "https://cdn-icons-png.flaticon.com/512/3075/3075768.png",
+              "type": "Almuerzo y cena",
+              "dateEntry": ""
+            }
+          ]
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "13/2/2023 19:06:01"
     }
   ],
   "users": [
