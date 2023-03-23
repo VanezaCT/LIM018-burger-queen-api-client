@@ -1,6 +1,13 @@
 <app-header></app-header>
 <div class="container">
 
+    <div>
+        <button (click)="ordPending()"> Pendientes </button>
+         <button (click)="ordCanceled()"> Cancelado </button>
+         <button (click)="ordDelivering()"> Entregando </button> 
+         <button (click)="ordDelivered()"> Entregado </button> 
+    </div>
+
     <div class="orders-grid">
 
 

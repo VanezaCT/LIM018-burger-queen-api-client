@@ -70,5 +70,29 @@ export class PedidosComponent implements OnInit {
     console.log(this.orders)
 
   }
+  ordPending(){
+    this.pedidoService.getallOrder()
+     .subscribe(data => {
+      this.orders = data.filter((t:any) => { return t.status=="pending"});
+    });
+  }
+  ordCanceled(){
+    this.pedidoService.getallOrder()
+     .subscribe(data => {
+      this.orders = data.filter((t:any) => { return t.status=="canceled"});
+    });
+  }
+  ordDelivering(){
+    this.pedidoService.getallOrder()
+     .subscribe(data => {
+      this.orders = data.filter((t:any) => { return t.status=="delivering"});
+    });
+  }
+  ordDelivered(){
+    this.pedidoService.getallOrder()
+     .subscribe(data => {
+      this.orders = data.filter((t:any) => { return t.status=="delivered"});
+    });
+  }
 
 }

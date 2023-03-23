@@ -225,6 +225,12 @@ body {
     padding: 1%;    
     margin-top: 1%;
 }
+.products-div p{
+    font-size: 150%;
+    font-weight: bolder;
+
+
+}
 
 .featured-clay > div > img{
     width: 80px;
@@ -279,3 +285,5 @@ body {
   content: "";
   z-index: -1;
 }
+
+

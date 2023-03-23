@@ -79,7 +79,7 @@
 
                             <h2>{{product.name}}</h2>
                             <img [src]="product.image" alt="">
-                            <p>{{product.price}}</p>
+                            <p>$ {{product.price}}</p>
 
                         </div>
 
@@ -125,7 +125,8 @@
 
                                 <h1>ID: {{user._id}}</h1>
                                 <h2>ADMINISTRA: {{user.email}}</h2>
-                                <caption> <button><img src="../../../assets/images/image-removebg-preview15.png "></button>
+                                <caption> <button><img
+                                            src="../../../assets/images/image-removebg-preview15.png "></button>
                                 </caption>
 
 
@@ -135,9 +136,13 @@
                                 <h2>ID: {{user._id}}</h2>
                                 <h3>USUARIO: {{user.email}}</h3>
                                 <div>
-                                    <button (click)="deleteU(user.id)"><img src="../../../assets/images/image-removebg-preview13.png    "></button>
+                                    <button (click)="deleteU(user.id)"><img
+                                            src="../../../assets/images/image-removebg-preview13.png    "></button>
                                     <button><img src="../../../assets/images/image-removebg-preview14.png "></button>
+                                   
+
                                 </div>
+
 
 
                             </div>
